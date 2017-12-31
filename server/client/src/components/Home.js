@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const Home = () => {
-  return (
-    <div>
-      This is the home app!
-    </div>
-  )
+class Home extends Component{
+  constructor(props){
+    super(props);
+  }
+
+
+  render() {
+    const { logoTitle } = this.props;
+    return (
+      <div>
+        {console.log(this.props.logoTitle)}
+      </div>
+    )
+  }
 }
 
 export default Home

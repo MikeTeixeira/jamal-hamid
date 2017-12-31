@@ -4,16 +4,8 @@ const keys = require('../config/keys')
 
 module.exports = (app) => {
   app.post("/services/package/questionnaire",(req,res) => {
-    const{firstName, lastName, email, age, weight, height} = req.body
-
-    // const fromEmail = new helper.Email(email);
-    // const toEmail = new helper.Email('jamalhamid558@gmail.com');
-    // const subject = 'This is the subject for the email'
-    // const content = new helper.Content('text/plain', 'this is the content');
-    // const mail = new helper.Mail(fromEmail, subject, toEmail, content);
-
+    const {firstName, lastName, email, age, weight, height} = req.body
     const sg = require('sendgrid')(keys.sendGridKey);
-
     var request = sg.emptyRequest({
       method: 'POST',
       path: '/v3/mail/send',
@@ -41,7 +33,7 @@ module.exports = (app) => {
 });
  
     sg.API(request)
-  .then(function (response) {
+    .then(function (response) {
     console.log(response.statusCode);
     console.log(response.body);
     console.log(response.headers);
@@ -51,20 +43,5 @@ module.exports = (app) => {
     // The full response is attached to error.response
     console.log(error.response.statusCode);
   });
-
-    console.log(firstName);
-    // const msg = {
-    //   to: 'jamalhamid558@gmail.com',
-    //   from: email,
-    //   subject: 'Hello world',
-    //   text: 'Hello plain world!',
-    //   html: '<p>Hello HTML world!</p>'
-    // };
-
-    // sgMail.send(msg).then(() => {
-    //   console.log('it worked', msg)
-    // }).catch(error => {
-    //   console.log(error.toString());
-    // })
   }); 
 };

@@ -1,26 +1,31 @@
 nav {
-  height: 100px;
+  height: 80px;
   text-align: center;
   background-color: white;
+  -webkit-box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
 }
 
 .nav_li {
   display: inline-block;
   list-style: none;
   margin-left: 40px;
-  padding-top: 50px;
+  padding-top: 25px;
   text-transform: uppercase;
+  animation: topToBottom 1s;
 }
 
 .nav_a{
   text-decoration: none;
-  color: white;
-  font-weight: 700px;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .nav_a:hover {
-  color: rgba(255, 36, 0, 2);
-  border-bottom: 2px solid rgba(255, 36, 0, 2);
+  color: $blood;
+  border-bottom: 2px solid $blood;
   -webkit-transition: .5s all;
   -moz-transition: .5s all;
   -ms-transition: .5s all;
@@ -28,12 +33,69 @@ nav {
   transition: .5s all;
 }
 
+.nav_content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo_wrapper {
+  position: absolute;
+}
+
+.logo {
+  margin: 17.5px 0;
+  position: relative;
+  font-size: 45px;
+  animation: leftToRight 1s;
+}
+
+.contact_wrapper {
+  background-color : $black;
+}
+
+.contact_info {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.envelope {
+  font-size: 25px;
+}
+
+.contact_email__p {
+  position: absolute;
+  padding-top: 5px;
+  margin: 0;
+  left: 155px;
+  bottom: 795px;
+  font-size: 15px;
+  color: $blood;
+  text-transform: uppercase;
+  font-family: Helvetica;
+}
+
+.social_media__a {
+  position: relative;
+  left: 1048px;
+  margin-left: 15px;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.hamburger {
+  visibility: hidden;
+  position: absolute; 
+}
+
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
 @media only screen 
   and (min-device-width: 320px) 
-  // and (max-device-width: 568px)
+  and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
     nav {
       background-color: rgba(0, 0, 0, 0.8);
@@ -72,7 +134,12 @@ nav {
 
     .hamburger {
       position: absolute;
+      visibility: visible;
       left: 255px;
       z-index: 2;
+    }
+
+    .logo_wrapper {
+      visibility: hidden;
     }
 }

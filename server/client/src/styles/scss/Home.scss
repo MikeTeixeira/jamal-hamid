@@ -1,0 +1,87 @@
+.home-wrapper {
+  max-height: 600px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 0px 61px 17px rgba(0, 0, 0, 0.38);
+}
+
+
+.banner_coat {
+  background-image: url('../../images/jamal_hamid_banner.jpeg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 2840px;
+    position: relative;
+    top: -100px;
+    left: -700px;
+    overflow-y: 500px;
+    animation: onLoad 4s;
+}
+
+.banner_text_wrapper {
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  color: $blood;
+  font-size: 70px;
+  font-family: "Fjalla One";
+  width: 1440px;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slogan {
+  position: relative;
+  font-size: 90px;
+}
+
+.left-banner__slogan {
+  top: 30px;
+  left: 100px;
+  animation: leftToRight 4s;
+}
+
+.right-banner__slogan {
+  top: 30px;
+  left: 30px;
+  animation: leftToRight 4s;
+}
+
+.training_package_wrapper {
+position: relative
+}
+
+.training_package__text {
+  font-size: 30px;
+  position: absolute;
+  left: 1000px;
+  margin: 0;
+  color: $blood;
+  animation: onLoad 6s;
+}
+
+.home_banner-cta{
+  position:absolute;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  padding: 10px 50px;
+  left: 1060px;
+  top: 50px;
+  animation: onLoad 6s;
+}
+
+.home_banner-cta:hover {
+  background-color: $blood;
+  transition: .3s;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 50px $black;
+}
+
+
+

@@ -1,7 +1,17 @@
+//-----------VARIABLES-----------//
+
+$blood: #d20000;
+$red: #ab1323;
+$black: #1c1c1c;
+$soft-black: #2e2e2e;
+
+
+
+
 body {
-  background-color: rgb(134, 194, 38);
   margin: 0;
   padding: 0;
+  background-color: $soft-black;
 }
 
 li {

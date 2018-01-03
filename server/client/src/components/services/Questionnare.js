@@ -1,40 +1,48 @@
 import React from 'react';
-import PersonalForm from './PersonalForm';
 import axios from 'axios';
+import PersonalForm from './PersonalForm';
+import LifeStyleForm from './LifeStyleForm';
 
 export default class Questionnare extends React.Component {
   constructor(props){
     super(props);
 
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      age: null,
-      weight: null,
-      height: null
+      renderPersonalForm: true,
+      personalForm: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        age: null,
+        height: null,
+        weight: null
+      }
     }
 
     this.handlePersonalFormInput = this.handlePersonalFormInput.bind(this);
+    this.handleOnClickPersonalForm = this.handleOnClickPersonalForm.bind(this);
   }
 
   onChange = (e) => {
-    const state = this.state;
+    const state = this.state.personalForm;
     state[e.target.name] = e.target.value;
-    this.setState(state);
+    this.setState(...state);
+    console.log(this.state);
+  }
+
+  handleOnClickPersonalForm = () => {
+    const renderPersonalForm = this.state.renderPersonalForm;
+    if(renderPersonalForm){
+      this.setState({renderPersonalForm: false})
+    } else if(!renderPersonalForm){
+      this.setState({renderPersonalForm: true});
+    }
   }
 
   handlePersonalFormInput = (e) => {
     e.preventDefault();
 
-    // const firstName = e.target.elements["firstName"].value;
-    // const lastName = e.target.elements["lastName"].value;
-    // const email = e.target.elements["email"].value;
-    // const age = e.target.elements["age"].value;
-    // const height = e.target.elements["height"].value;
-    // const weight = e.target.elements["weight"].value;
-
-    const { firstName, lastName, email, age, height, weight } = this.state;
+    const { firstName, lastName, email, age, height, weight } = this.state.personalForm;
 
     if(!firstName || !lastName || !email || !age || !height || !weight){
       alert('Please fill out the indicated fields');
@@ -43,7 +51,10 @@ export default class Questionnare extends React.Component {
     axios.post("/services/package/questionnaire", {
       firstName,
       lastName,
-      email
+      email,
+      age,
+      height,
+      weight
     }).then(function(response) {
       console.log({success: response.status})
       console.log(firstName);
@@ -57,28 +68,29 @@ export default class Questionnare extends React.Component {
   render() { 
     return (
       <div className="form-wrapper">
-        {/* <PersonalForm handlePersonalFormInput={this.handlePersonalFormInput} /> */}
         <form onSubmit={((e) => this.handlePersonalFormInput(e))}>
-        <h1>Personal Information</h1>
-          <label className="personal_info__label" htmlFor="firstName">First Name: </label>
-          <input onChange={this.onChange} className="personal-info__input" name="firstName" type="text"/>
-
-          <label className="personal_info__label" htmlFor="lastName">Last Name: </label>
-          <input onChange={this.onChange} className="personal-info__input" name="lastName" type="text"/>
-
-          <label className="personal_info__label" htmlFor="email">Email Address: </label>
-          <input onChange={this.onChange} className="personal-info__input" name="email" type="email"/>
-
-          <label className="personal_info__label" htmlFor="age">Age: </label>
-          <input onChange={this.onChange} className="personal-info__input" name="age" type="number" maxLength="2"/>
-
-          <label className="personal_info__label" htmlFor="height" maxLength="3"> Height: </label>
-          <input onChange={this.onChange} className="personal-info__input" name="height" type="number"/>
-
-          <label className="personal_info__label" htmlFor="weight">Weight: </label>
-          <input onChange={this.onChange} className="personal-info__input" name="weight" type="number" maxLength={3}/>
-          <button type="submit">Next</button>
+          {this.state.renderPersonalForm ? 
+          <PersonalForm
+          handleOnClickPersonalForm={this.handleOnClickPersonalForm}        
+          className="form-1"
+          value="1"
+          onChange={this.onChange}
+           />
+           : <LifeStyleForm />
+          }
         </form>
+        <div className="personal-form-detail-wrapper">
+          <div className="personal-form-detail__top">
+            <h1>Tell Me About Yourself</h1>
+          </div>
+          <div className="personal-form-detail__bottom">
+            <span className="form-1" ref="formSpanOne" value="1">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+          </div>
+        </div>
       </div>
     )
   }

@@ -21,7 +21,7 @@ module.exports = (app) => {
         }
       ],
       from: {
-        email: 'joeschmoe@gmail.com'
+        email: email
       },
       content: [
         {

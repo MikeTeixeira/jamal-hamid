@@ -1,0 +1,19 @@
+.form-wrapper {
+  background-color: green;
+  box-shadow: 0px 0px 200px black;
+  height: 600px;
+  max-width: 900px;
+  max-height: 900px;
+  margin: 50px auto;
+}
+
+.form-progress {
+  text-align: center;
+  z-index: 1;
+}
+
+.form-progress__span{
+  padding: 50px;
+  position: relative;
+  top: 30px;
+}

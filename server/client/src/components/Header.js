@@ -15,7 +15,6 @@ class Header extends Component  {
   
 
   onToggle = () => {
-    console.log('clicked');
     if(this.state.addClass === 'closed'){
       this.setState({
         addClass: 'open'

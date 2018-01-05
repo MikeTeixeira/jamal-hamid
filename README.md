@@ -4,9 +4,11 @@ A fitness coaching website for Strength & Conditioning Coach Jamal Hamid.
 
 ## Getting Started
 
+```
 cd server
 
 npm run dev
+```
 
 ### Prerequisites
 

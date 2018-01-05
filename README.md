@@ -12,10 +12,6 @@ npm run dev
 
 Please be sure to have create-react-app installed on your system
 
-```
-Give examples
-```
-
 ## Running the tests
 
 

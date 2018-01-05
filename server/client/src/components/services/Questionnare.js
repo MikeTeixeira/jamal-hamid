@@ -23,6 +23,7 @@ export default class Questionnare extends React.Component {
     this.handleOnClickPersonalForm = this.handleOnClickPersonalForm.bind(this);
   }
 
+
   onChange = (e) => {
     const state = this.state.personalForm;
     state[e.target.name] = e.target.value;
@@ -66,6 +67,7 @@ export default class Questionnare extends React.Component {
    }
 
   render() { 
+    console.log(this.props);
     return (
       <div className="form-wrapper">
         <form onSubmit={((e) => this.handlePersonalFormInput(e))}>

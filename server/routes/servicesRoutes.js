@@ -4,7 +4,9 @@ const keys = require('../config/keys')
 
 module.exports = (app) => {
   app.post("/services/package/questionnaire",(req,res) => {
-    const {firstName, lastName, email, age, weight, height} = req.body
+    const {firstName, lastName, email} = req.body
+
+    console.log(req.body);
     const sg = require('sendgrid')(keys.sendGridKey);
     var request = sg.emptyRequest({
       method: 'POST',

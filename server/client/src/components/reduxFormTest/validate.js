@@ -14,8 +14,11 @@ const validate = values => {
   if (!values.sex) {
     errors.sex = 'Required'
   }
-  if (!values.favoriteColor) {
-    errors.favoriteColor = 'Required'
+  if (!values.age) {
+    errors.age = 'Required'
+  }
+  if (!values.height){
+    errors.height = 'Required'
   }
   return errors
 }

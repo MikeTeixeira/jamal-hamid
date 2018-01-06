@@ -1,89 +1,76 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 import validate from './validate';
+import renderField from './renderField';
 import axios from 'axios';
-
-
-const colors = [
-  'Red',
-  'Orange',
-  'Yellow',
-  'Green',
-  'Blue',
-  'Indigo',
-  'Violet'
-]
-
-const renderColorSelector = ({
-  input,
-  meta: {
-    touched,
-    error
-  }
-}) => (
-  <div>
-    <select {...input}>
-      <option value="">Select a color...</option>
-      {colors.map(val => <option value={val} key={val}>{val}</option>)}
-    </select>
-    {touched && error && <span>{error}</span>}
-  </div>
-)
 
 
 class WizardFormThirdPage extends React.Component {
   constructor(props){
     super(props);
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
-  handleSubmit = (e) => {
+  // handleSubmit = (e) => {
 
-    const firstName = e.firstName;
-    const lastName = e.lastName;
-    const email = e.email;
+  //   const firstName = e.firstName;
+  //   const lastName = e.lastName;
+  //   const email = e.email;
+  //   console.log(e);
 
-      axios.post("/services/package/questionnaire", {
-      firstName,
-      lastName,
-      email
-    }).then(function(response) {
-      console.log({success: response.status})
-      alert("success")
-    }).catch(function(error) {
-      alert('error')
-      console.log(error);
-    })
-  }
+  //     axios.post("/services/package/questionnaire", {
+  //     firstName,
+  //     lastName,
+  //     email
+  //   }).then(function(response) {
+  //     console.log({success: response.status})
+  //     alert("success")
+  //   }).catch(function(error) {
+  //     alert('error')
+  //     console.log(error);
+  //   })
+  // }
+
+  // onSubmit={handleSubmit(this.handleSubmit.bind(this)
 
 
   render(){
   const {handleSubmit, pristine, previousPage, submitting, onSubmit } = this.props
     return (
-      <form onSubmit={handleSubmit(this.handleSubmit.bind(this))}>
-        <div>
-          <label>Favorite Color</label>
-          <Field name="favoriteColor" component={renderColorSelector}/>
-        </div>
-        <div>
-          <label htmlFor="employed">Employed</label>
+      <div>
+        <h1>Fitness History</h1>
+        <form onSubmit={handleSubmit} className="personal-form-wrapper" >
+          <label>Have you been consistently exercising? </label>
           <div>
-            <Field name="employed" id="employed" component="input" type="checkbox"/>
+            <label><Field name="consistentlyExercising" component="input" type="radio" value="yes" />Yes</label>
+            <label><Field name="consistentlyExercising" component="input" type="radio" value="No" />No</label>            
           </div>
-        </div>
-        <div>
-          <label>Notes</label>
           <div>
-            <Field name="notes" component="textarea" placeholder="Notes"/>
+          <label>If so for how long? </label>
+            <Field placeholder="3 weeks..." name="exerciseConsistency" component={renderField} />
           </div>
-        </div>
-        <div>
-          <button type="button" className="previous" onClick={previousPage}>Previous</button>
-          <button type="submit" disabled={pristine || submitting}>Submit</button>
-        </div>
-      </form>
+          <div>
+            <label>When did you first start thinking about getting in shape? </label>
+            <Field placeholder="A few days ago" component={renderField} name="inShapeTimePeriod" />
+          </div>
+          <div>
+            <label>Have you play sports growing up?</label>
+            <label><Field name="sportsGrowingUp" component="input" type="radio" value="yes" />Yes</label>
+            <label><Field name="sportsGrowingUp" component="input" type="radio" value="no" />No</label>            
+          </div>
+          <div>
+            <label>On a scale of 1-10, how would you rate your current fitness level?</label>
+            <Field name="fitnessLevelScale" component={renderField} />
+          </div>
+          <div>
+            <button type="button" className="previous" onClick={previousPage}>Previous</button>
+            <button type="submit" className="next">Next</button>
+            {/* <button type="submit" disabled={pristine || submitting}>Submit</button> */}
+          </div>
+        </form>
+      </div>
     )
   }
 }

@@ -24,7 +24,6 @@ class App extends Component {
             <Route path='/testimonials' component={Testimonials} />
             <Route exact={true} path='/services/packages/:id' component={Questionnare}/>
             <Route path='/services/packages/1/testing' component={WizardForm} />
-            <Route path="/services/packages/:id/personal-information" component={PersonalForm} />
           </div>
         </BrowserRouter>
       </div>

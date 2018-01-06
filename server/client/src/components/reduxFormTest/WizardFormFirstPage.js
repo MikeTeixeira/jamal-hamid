@@ -40,6 +40,7 @@ const WizardFormFirstPage = (props) => {
 
   return (
     <form className="personal-form-wrapper" onSubmit={handleSubmit}>
+      <h1>Personal Questions</h1>
       <Field name="firstName" type="text" component={renderField} label="First Name"/>
       <Field name="lastName" type="text" component={renderField} label="Last Name"/>
       <Field name="email" type="email" component={renderField} label="Email" />

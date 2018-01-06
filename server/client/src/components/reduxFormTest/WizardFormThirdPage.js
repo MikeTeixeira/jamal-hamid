@@ -40,8 +40,8 @@ class WizardFormThirdPage extends React.Component {
   const {handleSubmit, pristine, previousPage, submitting, onSubmit } = this.props
     return (
       <div>
-        <h1>Fitness History</h1>
         <form onSubmit={handleSubmit} className="personal-form-wrapper" >
+          <h1>Fitness History</h1>
           <label>Have you been consistently exercising? </label>
           <div>
             <label><Field name="consistentlyExercising" component="input" type="radio" value="yes" />Yes</label>
@@ -62,7 +62,7 @@ class WizardFormThirdPage extends React.Component {
           </div>
           <div>
             <label>On a scale of 1-10, how would you rate your current fitness level?</label>
-            <Field name="fitnessLevelScale" component={renderField} />
+            <Field maxLength="2" size="2" name="fitnessLevelScale" component={renderField} />
           </div>
           <div>
             <button type="button" className="previous" onClick={previousPage}>Previous</button>

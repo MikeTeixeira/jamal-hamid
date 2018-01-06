@@ -16,9 +16,8 @@ const WizardFormSecondPage = (props) => {
   const {handleSubmit, previousPage} = props
   return (
     <div>
-      <h1>Lifestyle Questions</h1>
-
       <form className="personal-form-wrapper" onSubmit={handleSubmit}>
+        <h1>Lifestyle Questions</h1>
         <label>Do you smoke? </label>
         <div>
           <label><Field name="smoke" component="input" type="radio" value="yes" />Yes</label>

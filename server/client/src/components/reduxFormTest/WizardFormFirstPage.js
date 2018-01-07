@@ -36,10 +36,10 @@ const renderHeightSelector = ({
 )
 
 const WizardFormFirstPage = (props) => {
-  const {handleSubmit} = props
+  const {handleSubmit, nextPage} = props
 
   return (
-    <form className="personal-form-wrapper" onSubmit={handleSubmit}>
+    <form className="wizard-form-wrapper" onSubmit={handleSubmit}>
       <h1>Personal Questions</h1>
       <Field name="firstName" type="text" component={renderField} label="First Name"/>
       <Field name="lastName" type="text" component={renderField} label="Last Name"/>
@@ -53,7 +53,9 @@ const WizardFormFirstPage = (props) => {
         </div>
       <div>
       <Field name="age" type="number" component={renderField} label="Age" />
-      <Field name="height" component={renderHeightSelector} />
+
+      <Field name="height" component={renderHeightSelector} label="Height" />
+
       <Field name="weight" type="number" component={renderField} label="Weight" />
         <button type="submit" className="next">Next</button>
       </div>

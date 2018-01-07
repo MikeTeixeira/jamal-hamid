@@ -1,14 +1,12 @@
 .form-wrapper {
   background-color: green;
   box-shadow: 0px 0px 200px black;
-  min-height: 600px;
   max-width: 900px;
-  max-height: 900px;
   margin: 50px auto;
   display: flex;
 }
 
-.personal-form-wrapper {
+.wizard-form-wrapper {
   padding: 20px;
   width: 600px;
   flex: 1;

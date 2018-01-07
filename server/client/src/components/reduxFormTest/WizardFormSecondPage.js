@@ -16,7 +16,7 @@ const WizardFormSecondPage = (props) => {
   const {handleSubmit, previousPage} = props
   return (
     <div>
-      <form className="personal-form-wrapper" onSubmit={handleSubmit}>
+      <form className="wizard-form-wrapper" onSubmit={handleSubmit}>
         <h1>Lifestyle Questions</h1>
         <label>Do you smoke? </label>
         <div>
@@ -28,7 +28,7 @@ const WizardFormSecondPage = (props) => {
           <label><Field name="alcohol" component="input" type="radio" value="yes" />Yes</label>
           <label><Field name="alcohol" component="input" type="radio" value="no" />No</label>
         </div>
-        <label>Describe Your Job: </label>
+        <label>Describe your job: </label>
         <div>
           <label><Field name="jobDescription" component="input" type="radio" value="sedentary" />Sedentary</label>
           <label><Field name="jobDescription" component="input" type="radio" value="active" />Active</label>
@@ -46,16 +46,6 @@ const WizardFormSecondPage = (props) => {
         </div>
         <label>If yes then who? </label>
         <Field name="familyOverweightMember" component={renderField} value="OverweightFamilyMember" />
-        <div>
-          <label>Sex</label>
-          <div>
-            <label><Field name="sex" component="input" type="radio" value="male"/>
-              Male</label>
-            <label><Field name="sex" component="input" type="radio" value="female"/>
-              Female</label>
-            <Field name="sex" component={renderError}/>
-          </div>
-        </div>
         <div>
           <button type="button" className="previous" onClick={previousPage}>Previous</button>
           <button type="submit" className="next">Next</button>

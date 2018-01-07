@@ -14,12 +14,10 @@ class WizardForm extends Component {
 
   }
   render() {
-
     const {onSubmit, nextPage, previousPage, pages} = this.props;
-
     return (
       <div>
-        {pages === 1 && <WizardFormFirstPage onSubmit={nextPage}/>  }
+        {pages === 1 && <WizardFormFirstPage onSubmit={nextPage}/>}
         {pages === 2 && <WizardFormSecondPage previousPage={previousPage} onSubmit={nextPage}/>}
         {pages === 3 && <WizardFormThirdPage previousPage={previousPage} onSubmit={nextPage}/>}
         {pages === 4 && <WizardFormFourthPage previousPage={previousPage} onSubmit={nextPage} />}

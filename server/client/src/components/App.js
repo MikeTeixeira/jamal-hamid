@@ -6,8 +6,7 @@ import About from './About'
 import Services from './Services'
 import Testimonials from './Testimonials'
 import Questionnare from './services/Questionnare';
-import PersonalForm from './services/PersonalForm';
-import WizardForm from './reduxFormTest/WizardForm';
+import WizardForm from './servicesWizardForm/WizardForm';
 
 class App extends Component {
 

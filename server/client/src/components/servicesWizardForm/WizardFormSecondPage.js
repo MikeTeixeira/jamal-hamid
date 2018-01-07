@@ -1,7 +1,7 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 import validate from './validate'
-import renderField from './renderField'
+import {renderField, renderRadioSelect} from './renderField'
 
 const renderError = ({
   meta: {
@@ -19,15 +19,9 @@ const WizardFormSecondPage = (props) => {
       <form className="wizard-form-wrapper" onSubmit={handleSubmit}>
         <h1>Lifestyle Questions</h1>
         <label>Do you smoke? </label>
-        <div>
-          <label><Field name="smoke" component="input" type="radio" value="yes" />Yes</label>
-          <label><Field name="smoke" component="input" type="radio" value="no" />No</label>
-        </div>
+        {renderRadioSelect("smoke")}
         <label>Do you drink alcohol? </label>
-        <div>
-          <label><Field name="alcohol" component="input" type="radio" value="yes" />Yes</label>
-          <label><Field name="alcohol" component="input" type="radio" value="no" />No</label>
-        </div>
+        {renderRadioSelect("alochol")}
         <label>Describe your job: </label>
         <div>
           <label><Field name="jobDescription" component="input" type="radio" value="sedentary" />Sedentary</label>
@@ -35,15 +29,9 @@ const WizardFormSecondPage = (props) => {
           <label><Field name="jobDescription" component="input" type="radio" value="physicallyDemanding" />Physically Demanding</label>
         </div>
         <label>Does your job require you to travel? </label>
-        <div>
-          <label><Field name="jobTravel" component="input" type="radio" value="yes" />Yes</label>
-          <label><Field name="jobTravel" component="input" type="radio" value="no" />No</label>
-        </div>
+        {renderRadioSelect("jobTravel")}
         <label>Is anyone in your family overweight? </label>
-        <div>
-          <label><Field name="familyOverweight" component="input" type="radio" value="yes"/>Yes</label>
-          <label><Field name="familyOverweight" component="input" type="radio" value="no"/>No</label>    
-        </div>
+        {renderRadioSelect("familyOverweight")}
         <label>If yes then who? </label>
         <Field name="familyOverweightMember" component={renderField} value="OverweightFamilyMember" />
         <div>

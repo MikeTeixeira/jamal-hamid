@@ -1,7 +1,7 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 import validate from './validate';
-import renderField from './renderField';
+import {renderField, renderRadioSelect} from './renderField';
 import axios from 'axios';
 
 
@@ -60,10 +60,7 @@ class WizardFormThirdPage extends React.Component {
         <form onSubmit={handleSubmit} className="wizard-form-wrapper" >
           <h1>Fitness History</h1>
           <label>Have you been consistently exercising? </label>
-          <div>
-            <label><Field name="consistentlyExercising" component="input" type="radio" value="yes" />Yes</label>
-            <label><Field name="consistentlyExercising" component="input" type="radio" value="No" />No</label>            
-          </div>
+          {renderRadioSelect("consistentlyExercising")}
           <div>
           <label>If so for how long? </label>
             <Field placeholder="3 weeks..." name="exerciseConsistency" component={renderField} />
@@ -72,11 +69,7 @@ class WizardFormThirdPage extends React.Component {
             <label>When did you first start thinking about getting in shape? </label>
             <Field placeholder="A few days ago" component={renderField} name="inShapeTimePeriod" />
           </div>
-          <div>
-            <label>Have you play sports growing up?</label>
-            <label><Field name="sportsGrowingUp" component="input" type="radio" value="yes" />Yes</label>
-            <label><Field name="sportsGrowingUp" component="input" type="radio" value="no" />No</label>            
-          </div>
+          {renderRadioSelect("sportsGrowingUp", "Have you played sports growing up?")}
           <div>
             <label>On a scale of 1-10, how would you rate your current fitness level?</label>
             <Field maxLength="2" size="2" name="fitnessLevelScale" component={renderField} />
@@ -90,11 +83,10 @@ class WizardFormThirdPage extends React.Component {
             <label>What are your long term goals? </label>
             <Field name="longTermGoals" component="textarea" type="textarea" />
           </div>
-          <div>
-            <label>Do you have any upcoming event(s) that you would like to get ready for?</label>
-            <label><Field name="hasUpcomingEvent" value="yes" component="input" type="radio" />Yes</label>
-            <label><Field name="hasUpcomingEvent" value="yes" component="input" type="radio" />No</label>         
-          </div>
+          {renderRadioSelect
+            ("hasUpcomingEvent", 
+            "Do you have any upcoming event(s) that you would like to get ready for?"
+          )}
           <div>
             <label>If yes, please specify the event(s).</label>
             <Field name="upcomingEvents" type="textarea" component="textarea" />
@@ -118,11 +110,7 @@ class WizardFormThirdPage extends React.Component {
             <label>What time of the day do you train?</label>
             <Field name="trainingTimeOfDay" component="input" type="time" />
           </div>
-          <div>
-            <label>Do you currently play any sports?</label>
-            <label><Field name="isCurrentlyPlayingSport" type="radio" value="yes" component="input" />Yes</label>
-            <label><Field name="isCurrentlyPlayingSport" type="radio" value="no" component="input" />No</label>          
-          </div>
+          {renderRadioSelect("isCurrentlyPlayingSport", "Do you currently play any sports?")}
           <div>
             <label>If yes, please specify the sport you play and how often you play.</label>
             <Field name="currentSportPlaying" type="textarea" component="textarea" />

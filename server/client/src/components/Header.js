@@ -54,12 +54,12 @@ class Header extends Component  {
             </a>
           </div>
         </div>
-        <nav className={this.state.addClass} >
+        <nav className="nav">
           <div className="nav_content">
             <div className="logo_wrapper">
               <h1 className="logo">Jamal Hamid</h1>
             </div>
-            <div onClick={(() => this.setState({addClass: 'closed'}))}>
+            <div className="nav-link-wrapper">
               <li className="nav_li"><Link className="nav_a" to={'/'}> Home </Link></li>
               <li className="nav_li"><Link className="nav_a" to={'/about'}> About </Link></li>
               <li className="nav_li"><Link className="nav_a" to={'/services'}> Services </Link></li>

@@ -10,10 +10,12 @@ export const renderField = ({ input, className, label, type, placeholder, size, 
   </div>
 );
 
-export const renderRadioSelect = ( name, description, className) => {
+export const renderRadioSelect = ( name, description, className, id) => {
   return <div>
     <label>{description}</label>
-    <label><Field name={name} className={className} component="input" type="radio" value="yes"/>Yes</label>
-    <label><Field name={name} component="input" type="radio" value="no"/>No</label>
+    <Field name={name} id={id} className={className} component="input" type="radio" value="yes"/>
+    <label for={id}>Yes</label>
+    <Field name={name} id={id} className={className} component="input" type="radio" value="no"/>
+    <label for={id}>No</label>
   </div>
 };

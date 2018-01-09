@@ -1,7 +1,8 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 import validate from './validate'
-import {renderField} from './renderField'
+import {renderField} from './renderField';
+import {Input} from 'react-materialize';
 
 
 const renderError = ({
@@ -19,7 +20,7 @@ const heightOptions = ([
   "6'4","6'5","6'6","6'7","6'8","6'9",
 ]);
 
-const genderOptions = (["Male", "Female"]);
+const genderOptions = (["Default","Male", "Female"]);
 
 const renderGenderSelector = ({
   input,
@@ -28,12 +29,11 @@ const renderGenderSelector = ({
     error
   }
 }) => (
-  <div>
-    {touched && error && <span className="heightError">{error}</span>}
-    <select {...input}>
-      <option value="">Your Gender</option>
+  <div className="input-field col s3" >
+    {touched && error && <span>{error}</span>}
+    <Input {...input} s={12} type='select' label="Your Gender" defaultValue='2'>
       {genderOptions.map(val => <option value={val} key={val}>{val}</option>)}
-    </select>
+    </Input> 
   </div>
 )
 
@@ -57,33 +57,44 @@ const WizardFormFirstPage = (props) => {
   const {handleSubmit, nextPage} = props
 
   return (
-    <form className="wizard-form-wrapper" onSubmit={handleSubmit}>
-      <h1>Personal Questions</h1>
-      <div className="firstNameInput">
-        <Field className="wizardInputField" placeholder="First Name" name="firstName" type="text" component={renderField} />        
-      </div>
-      <div className="lastNameInput">
-        <Field className="wizardInputField" placeholder="Last Name" name="lastName" type="text" component={renderField} />        
-      </div>
-      <div className="emailInput" >
-        <Field className="wizardInputField emailField" placeholder="Email" name="email" type="email" component={renderField} />        
-      </div>
-      <div className="genderInput">
-        <Field name="wizardInputField" placeholder="Your Gender" name="gender" component={renderGenderSelector} />
-      </div>
-      <div>
-        <Field className="wizardInputField ageInput" placeholder="Your age" name="age" type="number" component={renderField} />
-      </div>
-      <div className="heightInput">
-        <Field className="wizardInputField heightField" placeholder="Your height"  name="height" component={renderHeightSelector} />        
-      </div>
-      <div className="weightInput">
-        <Field className="wizardInputField" placeholder="Your weight" name="weight" type={renderField} component={renderField} label="Weight" />        
-      </div>
-      <div>
-        <button type="submit" className="next">Next</button>
-      </div>
-    </form>
+    <div className="row" >
+      <form className="col s12" onSubmit={handleSubmit}>
+        <h1>Personal Questions</h1>
+        <div className="row" >
+          <div className="input-field col s6">
+            <Field className="validate" id="first_name" placeholder="First Name" name="firstName" type="text" component={renderField} />       
+          </div>
+          <div className="input-field col s6">
+            <Field className="validate" placeholder="Last Name" name="lastName" type="text" component={renderField} />       
+          </div>
+        </div>
+        <div className="row" >
+          <div className="input-field col s12" >
+            <Field className="validate" placeholder="Email" name="email" type="email" component={renderField} />        
+          </div>
+        </div>
+        <div className="row">
+          <Field className="validate" placeholder="Your Gender" name="gender" component={renderGenderSelector} />  
+        </div>       
+        {/* <div className="row" >
+          <div className="input-field col s12" >
+            <Field name="gender" type="radio" component={renderGenderSelector} />
+          </div>
+        </div> */}
+          {/* <div>
+            <Field className="wizardInputField ageInput" placeholder="Your age" name="age" type="number" component={renderField} />
+          </div>
+          <div className="heightInput">
+            <Field className="wizardInputField heightField" placeholder="Your height"  name="height" component={renderHeightSelector} />        
+          </div>
+          <div className="weightInput">
+            <Field className="wizardInputField" placeholder="Your weight" name="weight" type={renderField} component={renderField} label="Weight" />        
+          </div> */}
+        <div>
+          <button type="submit" className="next">Next</button>
+        </div>
+      </form>
+    </div>
   )
 }
 

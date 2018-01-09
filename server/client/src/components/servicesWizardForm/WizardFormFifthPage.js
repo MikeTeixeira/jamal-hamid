@@ -2,15 +2,41 @@ import React, {Component} from 'react';
 import {Field, reduxForm } from 'redux-form';
 import validate from './validate';
 import {renderField, renderRadioSelect} from './renderField';
+import axios from 'axios';
 
 class WizardFormFifthPage extends Component {
+  constructor(props){
+    super(props);
+
+  }
+
+
+  handleSubmit = (e) => {
+
+    const firstName = e.firstName;
+    const lastName = e.lastName;
+    const email = e.email;
+    console.log(e);
+
+      axios.post("/services/package/questionnaire", {
+      firstName,
+      lastName,
+      email
+    }).then(function(response) {
+      console.log({success: response.status})
+      alert("success")
+    }).catch(function(error) {
+      alert('error')
+      console.log(error);
+    })
+  }
 
   render(){
 
-    const {handleSubmit, previousPage } = this.props;
+    const {handleSubmit, previousPage, pristine, submitting } = this.props;
 
     return(
-      <form className="wizard-form-wrapper" onSubmit={handleSubmit}>
+      <form className="wizard-form-wrapper" onSubmit={handleSubmit(this.handleSubmit.bind(this))}>
         <h1>Nutrition Questions</h1>
         {renderRadioSelect("hasTrackedMacros","Do you or have you ever tracked your calories/macronutrients?")}
         <div>
@@ -42,7 +68,8 @@ class WizardFormFifthPage extends Component {
           /> 
         </div>  
         <div>
-          <button type="button" onClick={previousPage} className="previous" >Previous</button>
+          <button type="button" onClick={previousPage} className="previous">Previous</button>
+          <button type="submit" disabled={pristine || submitting}>Submit</button>
         </div>
       </form>
     )

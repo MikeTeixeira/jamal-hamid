@@ -62,14 +62,16 @@ position: relative
   left: 1000px;
   margin: 0;
   color: $blood;
+  top: 150px;
   animation: onLoad 6s;
 }
 
 .home_banner-cta{
   position:absolute;
   left: 1060px;
-  top: 50px;
+  top: 200px;
   animation: onLoad 6s;
+  font-size: 20px;
 }
 
 

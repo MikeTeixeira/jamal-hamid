@@ -14,6 +14,9 @@ class Home extends Component{
         </div>
         </div>
         <div className="banner_coat"></div>
+        <div>
+          <h1>Welcome</h1>
+        </div>
       </div>
     )
   }

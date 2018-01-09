@@ -19,6 +19,24 @@ const heightOptions = ([
   "6'4","6'5","6'6","6'7","6'8","6'9",
 ]);
 
+const genderOptions = (["Male", "Female"]);
+
+const renderGenderSelector = ({
+  input,
+  meta: {
+    touched,
+    error
+  }
+}) => (
+  <div>
+    {touched && error && <span className="heightError">{error}</span>}
+    <select {...input}>
+      <option value="">Your Gender</option>
+      {genderOptions.map(val => <option value={val} key={val}>{val}</option>)}
+    </select>
+  </div>
+)
+
 const renderHeightSelector = ({
   input,
   meta: {
@@ -27,11 +45,11 @@ const renderHeightSelector = ({
   }
 }) => (
   <div>
+    {touched && error && <span className="heightError">{error}</span>}
     <select {...input}>
       <option value="">Your Height</option>
       {heightOptions.map(val => <option value={val} key={val}>{val}</option>)}
     </select>
-    {touched && error && <span>{error}</span>}
   </div>
 )
 
@@ -41,22 +59,28 @@ const WizardFormFirstPage = (props) => {
   return (
     <form className="wizard-form-wrapper" onSubmit={handleSubmit}>
       <h1>Personal Questions</h1>
-      <Field name="firstName" type="text" component={renderField} label="First Name"/>
-      <Field name="lastName" type="text" component={renderField} label="Last Name"/>
-      <Field name="email" type="email" component={renderField} label="Email" />
+      <div className="firstNameInput">
+        <Field className="wizardInputField" placeholder="First Name" name="firstName" type="text" component={renderField} />        
+      </div>
+      <div className="lastNameInput">
+        <Field className="wizardInputField" placeholder="Last Name" name="lastName" type="text" component={renderField} />        
+      </div>
+      <div className="emailInput" >
+        <Field className="wizardInputField emailField" placeholder="Email" name="email" type="email" component={renderField} />        
+      </div>
+      <div className="genderInput">
+        <Field name="wizardInputField" placeholder="Your Gender" name="gender" component={renderGenderSelector} />
+      </div>
       <div>
-        <label><Field name="sex" component="input" type="radio" value="male"/>
-          Male</label>
-        <label><Field name="sex" component="input" type="radio" value="female"/>
-          Female</label>
-        <Field name="sex" component={renderError}/>
-        </div>
+        <Field className="wizardInputField ageInput" placeholder="Your age" name="age" type="number" component={renderField} />
+      </div>
+      <div className="heightInput">
+        <Field className="wizardInputField heightField" placeholder="Your height"  name="height" component={renderHeightSelector} />        
+      </div>
+      <div className="weightInput">
+        <Field className="wizardInputField" placeholder="Your weight" name="weight" type={renderField} component={renderField} label="Weight" />        
+      </div>
       <div>
-      <Field name="age" type="number" component={renderField} label="Age" />
-
-      <Field name="height" component={renderHeightSelector} label="Height" />
-
-      <Field name="weight" type="number" component={renderField} label="Weight" />
         <button type="submit" className="next">Next</button>
       </div>
     </form>

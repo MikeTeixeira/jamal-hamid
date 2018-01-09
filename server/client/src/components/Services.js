@@ -6,23 +6,57 @@ export default class Services extends React.Component {
 
   render () {
     return (
-      <div>
-        <div>
-          <h1>Package One</h1>
-          <h3>$150.00</h3>
-          <button><Link to={"/services/packages/personal-form"}>Click Me</Link></button>
+      <div className="services-container">
+        <div className="services-wrapper" >
+          <div className="package-wrapper">
+            <div className="package-top">
+              <h2>Package One</h2>
+              <ul className="package-list-wrapper">
+                <li>Custom Training Plan</li>
+                <li>Weekly Check-ins</li>
+                <li>Testing</li>
+                <li>Testing</li>
+              </ul>
+              <h3 className="package-price">$150.00</h3>
+            </div>
+            <div className="package-bottom" >
+              <button className="button" ><Link to={"/services/packages/personal-form"}>Click Me</Link></button>
+            </div>
+          </div>
+          <div className="package-wrapper">
+            <div className="package-top" >
+              <h2>Package Two</h2>
+              <ul className="package-list-wrapper">
+                <li>Custom Training Plan</li>
+                <li>Weekly Check-ins</li>
+                <li>Testing</li>
+                <li>Testing</li>
+              </ul>            
+              <h3 className="package-price">$225.00</h3>
+            </div>
+            <div className="package-bottom" >
+              <button className="button" ><Link to={'/services/packages/personal-form'}>Click me</Link></button>
+            </div>
+          </div>
+          <div className="package-wrapper">
+            <div className="package-top">
+              <h2>Package Three</h2>
+              <ul className="package-list-wrapper">
+                <li>Custom Training Plan</li>
+                <li>Weekly Check-ins</li>
+                <li>Testing</li>
+                <li>Testing</li>
+              </ul>
+              <h3 className="package-price">$275.00</h3>              
+            </div>            
+            <div className="package-bottom">
+              <button className="button" ><Link to={'/services/packages/personal-form'}>Click Me</Link></button>
+            </div>
+          </div>
         </div>
-        <div>
-          <h1>Package Two</h1>
-          <h3>$225.00</h3>
-          <button><Link to={'/services/packages/personal-form'}>Click me</Link></button>
-        </div>
-        <div>
-          <h1>Package Three</h1>
-          <h3>$275.00</h3>
-          <button><Link to={'/services/packages/personal-form'}>Click Me</Link></button>
-        </div>
+        <div className="services-parallex" >
 
+        </div>
       </div>
     )
   }

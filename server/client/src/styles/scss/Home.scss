@@ -67,20 +67,9 @@ position: relative
 
 .home_banner-cta{
   position:absolute;
-  outline: none;
-  background-color: transparent;
-  color: white;
-  padding: 10px 50px;
   left: 1060px;
   top: 50px;
   animation: onLoad 6s;
-}
-
-.home_banner-cta:hover {
-  background-color: $blood;
-  transition: .3s;
-  transform: scale(1.1);
-  box-shadow: 0px 0px 50px $black;
 }
 
 

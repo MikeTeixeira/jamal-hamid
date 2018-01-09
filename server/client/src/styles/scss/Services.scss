@@ -1,0 +1,56 @@
+
+//--------WRAPPERS--------//
+
+.services-container{
+  height: 500px;
+}
+
+.services-wrapper {
+  display: flex;
+  height: 100%;
+  margin: 100px auto;
+  position: relative;
+  background-color: $blood;
+}
+
+//-----PACKAGES-------//
+
+.package-wrapper {
+  background-color: white;
+  flex: 1;
+  justify-content: space-between; 
+  height: 300px;
+  margin: 30px;
+  position: relative;
+  top: 100px;
+  text-align: center;
+  box-shadow: 0px 0px 50px $black;
+}
+
+//-------PACKAGE TOP/BOTTOM ------//
+
+.package-top, .package-bottom {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.package-list-wrapper {
+  text-align: left;
+}
+
+.package-price {
+  margin: 40px auto;
+}
+
+
+//------SERVICES PARALLEX----//
+
+.services-parallex {
+  background-image: url('../../images/services-parallex.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 1440px;
+  min-height: 450px;
+}

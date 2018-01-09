@@ -1,0 +1,81 @@
+
+
+.wizardInputField {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: yellowgreen;
+  font-size: 17px;
+  font-family: Helvetica;
+  margin-top: 20px;
+  padding: 10px;
+  position: relative;
+  left: 20px;
+}
+
+.wizardInputField:focus {
+  transform: scale(1.1);
+}
+
+//---------INPUT FIELDS--------//
+
+.error {
+  position: absolute;
+  color: $red;
+  border-bottom: 1px solid $red;
+}
+
+.firstNameInput {
+  left: 20px;
+}
+
+.lastNameInput {
+  position: relative;
+  left: 300px;
+  width: 200px;
+  bottom: 63px;
+}
+
+.emailInput {
+  left: 20px;
+  width: 490px;
+}
+
+.emailField {
+  width: 100%;
+}
+
+.genderInput {
+  font-size: 20px;
+  color: $blood;
+  margin-bottom: 50px;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.heightInput {
+  bottom: 120px;
+  left: 350px;
+  padding-right: 20px;
+  position: relative;
+  width: 180px;
+}
+
+.heightError {
+  position: absolute;
+  left: 100px;
+  color: $red;
+  border-bottom: 1px solid $red;
+}
+
+.weightInput {
+  position: relative;
+  left: 300px;
+  width: 200px;
+  bottom: 81px;
+}
+
+
+

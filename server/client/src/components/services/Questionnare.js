@@ -9,23 +9,26 @@ class Questionnare extends Component {
 
   }
   render() { 
-    console.log(this.props.spanActive);
+
     const { spanActive } = this.props;
-    const pageHeaders = ['Tell Me About Yourself', "Testing 2", "Testing 3", "Testing 4"];
-    const pageDescription = ["testing page 1","testing page 2","testing page 3","testing page 4"];
-    const spanPages = [1,2,3,4];
+    const pageHeaders = ['Tell Me About Yourself', "So what's your day like?", "Testing 3", "Testing 4", "Testing 5"];
+    const pageDescription = 
+    ["Giving me your basic information allows us to stay in contact.",
+    "testing page 2","testing page 3","testing page 4", "testing 5th page"];
+    const spanPages = [1,2,3,4,5];
+
     return (
       <div className="form-wrapper">
         <WizardForm />
-        <div className="personal-form-detail-wrapper">
-          <div className="personal-form-detail__bottom">
+        <div className="wizard-form-detail-wrapper">
+          <div className="wizard-form-detail__bottom">
             {spanPages.map(val =>
               val === spanActive ?
               <span style={{color: 'blue'}} className=" standardClass  active">{val}</span> : 
               <span className=" standardClass">{val}</span>           
             )}            
           </div>
-          <div className="personal-form-detail__top">
+          <div className="wizard-form-detail__top">
             {pageHeaders.map((header, index) =>
               index === spanActive - 1 ? 
               <div>

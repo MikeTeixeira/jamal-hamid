@@ -10,7 +10,7 @@ class Home extends Component{
           <h1 className="slogan right-banner__slogan">Your Year</h1>
         <div className="training_package_wrapper">
           <h3 className="training_package__text">Let's Work Together...</h3>
-          <button  className="home_banner-cta">Learn More</button>
+          <button  className=" button home_banner-cta">Learn More</button>
         </div>
         </div>
         <div className="banner_coat"></div>

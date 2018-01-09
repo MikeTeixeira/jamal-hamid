@@ -31,7 +31,7 @@ const renderGenderSelector = ({
 }) => (
   <div className="input-field col s3" >
     {touched && error && <span>{error}</span>}
-    <Input {...input} s={12} type='select' label="Your Gender" defaultValue='2'>
+    <Input {...input} s={12} type='select' label="Your Gender">
       {genderOptions.map(val => <option value={val} key={val}>{val}</option>)}
     </Input> 
   </div>
@@ -47,7 +47,7 @@ const renderHeightSelector = ({
   <div>
     {touched && error && <span className="heightError">{error}</span>}
     <select {...input}>
-      <option value="">Your Height</option>
+      <option value="height">Your Height</option>
       {heightOptions.map(val => <option value={val} key={val}>{val}</option>)}
     </select>
   </div>

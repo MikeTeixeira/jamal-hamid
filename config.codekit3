@@ -9,12 +9,6 @@
 	],
 "creatorBuild": "25849",
 "files": {
-	"\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.gitignore",
-		"oF": 0
-		},
 	"\/server\/.gitignore": {
 		"ft": 8192,
 		"oA": 2,

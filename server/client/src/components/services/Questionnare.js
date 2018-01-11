@@ -18,24 +18,26 @@ class Questionnare extends Component {
     const spanPages = [1,2,3,4,5];
 
     return (
-      <div className="form-wrapper">
-        <WizardForm />
-        <div className="wizard-form-detail-wrapper">
-          <div className="wizard-form-detail__bottom">
-            {spanPages.map(val =>
-              val === spanActive ?
-              <span style={{color: 'blue'}} className=" standardClass  active">{val}</span> : 
-              <span className=" standardClass">{val}</span>           
-            )}            
-          </div>
-          <div className="wizard-form-detail__top">
-            {pageHeaders.map((header, index) =>
-              index === spanActive - 1 ? 
-              <div>
-                <h1>{header}</h1> 
-                <p>{pageDescription[index]}</p>
-              </div> : null
-            )}           
+      <div className="form-background">
+        <div className="form-wrapper">
+          <WizardForm />
+          <div className="wizard-form-detail-wrapper">
+            <div className="wizard-form-detail__bottom">
+              {spanPages.map(val =>
+                val === spanActive ?
+                <span style={{color: 'blue'}} className=" standardClass  active">{val}</span> : 
+                <span className=" standardClass">{val}</span>           
+              )}            
+            </div>
+            <div className="wizard-form-detail__top">
+              {pageHeaders.map((header, index) =>
+                index === spanActive - 1 ? 
+                <div>
+                  <h1>{header}</h1> 
+                  <p>{pageDescription[index]}</p>
+                </div> : null
+              )}           
+            </div>
           </div>
         </div>
       </div>

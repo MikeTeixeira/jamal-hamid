@@ -26,7 +26,7 @@ class App extends Component {
             <Route path='/services/packages/1/testing' component={WizardForm} />
           </div>
         </BrowserRouter>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }

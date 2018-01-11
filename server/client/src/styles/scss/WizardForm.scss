@@ -1,13 +1,32 @@
+.form-background::after {
+  background: #757F9A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+}
+
+.form-background {
+  background: #757F9A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 730px;
+}
+
 .form-wrapper {
   background-color: #E4E4E1;
   background-image: radial-gradient(at top center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%),
   linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.60) 100%);
   background-blend-mode: normal,
   multiply;
-  box-shadow: 0px 0px 200px black;
-  max-width: 900px;
-  margin: 50px auto;
+  box-shadow: 0px 0px 100px black;
+  max-width: 1100px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .wizard-form-wrapper {
@@ -28,7 +47,7 @@
 //------------QUESTIONNAIRE FORM COMPONENT------------//
 
 .wizard-form-detail__top{
-  flex: 1;
+  flex: 3;
 }
 
 .wizard-form-detail__bottom{

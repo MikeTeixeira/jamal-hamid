@@ -1,8 +1,8 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 import validate from './validate'
-import {renderField, renderTextField, renderSelectHeightField} from './renderField';
-import {Row, Input} from 'react-materialize';
+import {renderField, renderTextField, renderSelectHeightField, renderSelectGenderField} from './renderField';
+import {Row, Col, Input} from 'react-materialize';
 import MenuItem from 'material-ui/MenuItem';
 
 
@@ -40,7 +40,7 @@ const WizardFormFirstPage = (props) => {
 
   return (
     <div className="wizardFormOne">
-      <Row>
+      <Row className="col s12" >
         <form className="col s12" onSubmit={handleSubmit}>
           <h1>Personal Questions</h1>
           <Row>
@@ -54,24 +54,20 @@ const WizardFormFirstPage = (props) => {
           <Row className="col s12" >
             <Field className="col s12" label="Email Address: " name="email" type="email" component={renderTextField} />       
           </Row>
-          <Row>
-            <Field className="col s3" component={renderSelectHeightField} label="Your Height" name="height">
-            </Field>           
-          </Row>
-          <Row>
-            <Field  placeholder="Your Gender" name="sex" component={renderGenderSelector} />
-            {/* <Field  placeholder="Your Height" name="height" component={renderHeightSelector} /> */}
-            <div className="input-field col s3">
-              <Input type="number" label="Your Age">
-                <Field  placeholder="Your Age" name="age" component={renderField} />
-              </Input>
+          <Row className="col s12 wizardFormOneBottomRow" >
+            <div className="col s3 testing">
+              <Field className="heightField" label="Your Height" name="height" component={renderSelectHeightField} /> 
             </div>
-            <div className="input-field col s3"> 
-              <Input  type='text' label="Your Weight">
-                <Field id="weight" name="weight" component={renderField} />            
-              </Input>
-            </div> 
-          </Row>       
+            <div className="col s3 testing ">
+              <Field className="genderField" label="Your Gender" name="sex" component={renderSelectGenderField} />
+            </div>
+            <div className="col s3 testing ">
+              <Field  className="ageField" label="Your Age" name="age" component={renderTextField} />          
+            </div>
+            <div className="col s3 testing">
+              <Field className="col s3" label="Your Weight" name="weight"  component={renderTextField} />
+            </div>
+          </Row>      
           <div>
             <button type="submit" className="next">Next</button>
           </div>

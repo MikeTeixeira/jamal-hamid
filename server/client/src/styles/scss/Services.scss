@@ -31,8 +31,11 @@
 .services-header{
   position: absolute;
   margin: 0 auto;
-  left: 607.125px;
+  left: 0;
+  right: 0;
+  width: 440px;
   font-size: $xx-large;
+  text-align: center;
 }
 
 //-------PACKAGE TOP/BOTTOM ------//

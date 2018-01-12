@@ -6,6 +6,14 @@ $black: #1c1c1c;
 $soft-black: #2e2e2e;
 $roboto-font-path: "../fonts/roboto/" !default;
 
+//------------FONTS------------//
+
+@font-face {
+  font-family: "ApleTime";
+  src: url("/fonts/Aple-Time.woff");
+}
+
+
 // Media Query Ranges
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;
@@ -31,6 +39,13 @@ $xx-large: 3em;
 $xxx-large: 3.5em;
 $xxxx-large: 4em;
 
+//-----------LINE HEIGHT---------//
+$small-height: 1em;
+$medium-height: 1.5em;
+$large-height: 2em;
+$x-large-height: 2.5em;
+$xx-large-height: 3em;
+
 //------GLOBAL HTML STYLES-------//
 body {
   margin: 0;
@@ -38,7 +53,6 @@ body {
   background: #000000;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #434343, #000000) fixed;  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #434343, #000000) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   overflow-x: hidden;
 }
 
@@ -75,4 +89,30 @@ a {
   transition: .3s;
   transform: scale(1.1);
   box-shadow: 0px 0px 20px $black;
+}
+
+
+//--------------PRE LOADER---------//
+
+div#root > div.preLoader-wrapper > div.preLoader.preloader-wrapper.active.big {
+  width: 150px;
+  height: 150px;
+  top: 300px;
+  color: $blood;
+}
+
+.preLoader-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.preLoader {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 400px; 
 }

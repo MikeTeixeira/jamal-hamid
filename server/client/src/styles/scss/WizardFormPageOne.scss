@@ -10,22 +10,6 @@
 
 //------OVERRIDING REACT-MATERIALIZE-UI -----------//
 
-// div.row > div.col.input-field.s6 > div > div > input.prefix {
-//   width: 0%; 
-// }
-
-// div.col.input-field.s3 > div.col.input-field > div > div > input.prefix {
-//   width: 0%; 
-// }
-
-// div.col.input-field.s6 > label.active:focus {
-//   color: red;
-// }
-
-// div.col.input-field.s12 > div > div > input.prefix {
-//   width: 0%;
-// } 
-
 div.row > div.row.col > div.col > input{
   box-shadow: none;
 }
@@ -34,15 +18,41 @@ form.col.s12 > div.row.col.s12 > div.col.s12 > input{
   box-shadow: none;
 }
 
-//------------------------------//
+// form.col.s12 > div.row.col.s12 > div.ageField > input{
+//   box-shadow: none;
+// }
 
+@media #{$extra-large-and-up}{
+  div.row.col.s12 >  .testing {
+    width: 163.6px;
+    padding: 0;
+  }
 
-//------------WIZARD FORM ONE----------//
+  form.col.s12 > div.col.s3 > div.col.s3 > div.ageField > input {
+    box-shadow: none;
+  }
 
-.wizardFormOne {
-  width: 700px;
-  margin: 50px;
+  //------------------------------//
+
+  
+  //------------WIZARD FORM ONE----------//
+  .wizardFormOne {
+    width: 700px;
+    margin: 50px;
+  }
+
+  //-------------- INPUT FIELDS ------------//
+  .wizardFormOneBottomRow {
+    padding: 0;
+  }
+
+  .heightField,
+  .genderField,
+  .ageField {
+    max-width: 90%;
+  }
 }
+
 
 
 

@@ -1,9 +1,18 @@
-// .footer-wrapper{
-//   position: relative;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   padding: 1rem;
-//   background-color: #efefef;
-//   text-align: center;
-// }
+.footer-wrapper{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.footer-row {
+  max-width: 1200px;
+  display: flex;
+}
+
+.footer-col {
+  flex: 1;
+}

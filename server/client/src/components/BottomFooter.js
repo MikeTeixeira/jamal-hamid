@@ -7,9 +7,9 @@ export default class BottomFooter extends Component {
     return(
       <div className="footer-wrapper">
         <Row className="footer-row" >
-          <Col className="footer-col1  footer-col "> Text</Col>
-          <Col className="footer-col2  footer-col"> Text</Col>
-          <Col className="footer-col3  footer-col"> Text</Col>
+          <Col className="footer-col1  footer-col "></Col>
+          <Col className="footer-col2  footer-col"></Col>
+          <Col className="footer-col3  footer-col"></Col>
         </Row>
         <Row className="footer-row" >
         <Col className="footer-col">Copyright © 2018 Jamal Hamid. All rights reserved. </Col>

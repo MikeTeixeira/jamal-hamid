@@ -77,29 +77,29 @@ position: relative
 
 //-------------- AFTER LANDING PAGE BANNER ------------//
 
-.home-services-wrapper {
+.home-about-wrapper {
   width: 1440px;
   color: white;
   padding-top: 20px;
   padding-bottom: 50px;
 }
 
-div.col.s1.home-services-icon-col, div.col.s2.home-services-content-col {
+div.col.s1.home-about-icon-col, div.col.s2.home-about-content-col {
   width: 100%;
   text-align: center;
 }
 
-.home-services-icon {
+.home-about-icon {
   text-align: center;
 }
 
-div.col.s2.home-services-content-col {
+div.col.s2.home-about-content-col {
   padding-top: 25px;
   line-height: $large-height;
 }
 
 //----------HOME SERVICES HEADER-------------//
-.home-services-header {
+.home-about-header {
   font-family: "ApleTime";
   margin: 0;
   text-align: center;
@@ -109,17 +109,17 @@ div.col.s2.home-services-content-col {
 
 //-----------HOME SERVICES ROW--------------//
 
-.home-services-row {
+.home-about-row {
   padding-top: 50px;
   margin-bottom: 40px;
   width: 1220px;
 }
 
-.home-services-title {
+// .home-about-title {
   
-}
+// }
 
-.home-services-info {
+.home-about-info {
   width: 250px;
   margin: 0 auto;
 }
@@ -153,4 +153,71 @@ div.col.s2.home-services-content-col {
   text-align: center;
   top: 255px;
 }
+
+
+div.row.home-services-wrapper, .home-testimonial-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+//----------HOME SERVICES ----------------//
+
+
+.home-jamal-hamid__fadeAnimation {
+  background-image: url("../../images/jamal-hamid-home-service.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin: 0;
+}
+
+
+//----------HOME TESTIMONIAL --------------//
+
+
+.home-chris-weidman-wrapper {
+  text-align: center;
+  max-height: 670px;
+  overflow-y: hidden;
+  padding-top: 200px;
+}
+
+.home-testimonial__fadeAnimation {
+  background-image: url("../../images/chris-weidman.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 1440px;
+  color: white;
+  animation: leftToRight 1s;
+  margin: 0 auto;
+}
+
+//--------- CHRIS WEIDMAN TESTIMONIAL --------------//
+
+.home-chris-weidman-title {
+  font-family: "ApleTime";
+  letter-spacing: 1.1em;
+  color: $blood;
+}
+
+.home-chris-weidman-testimonial {
+
+}
+
+.home-chris-weidman-testimonial-text {
+  padding: 30px 50px;
+  line-height: 3em;
+  font-size: 16px;
+  color: white;
+}
+
+#home-test-jamal-hamid {
+  color: $blood;
+  font-size: 30px;
+}
+
+
 

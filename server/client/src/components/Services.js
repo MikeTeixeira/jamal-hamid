@@ -1,64 +1,45 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import axios from 'axios';
+import ServicePackageItem from './ServicePackageItem';
 
-export default class Services extends React.Component {
 
+ class Services extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      packages: []
+    }
+    this.loadPackagesFromServer = this.loadPackagesFromServer.bind(this);
+  }
+
+  loadPackagesFromServer(){
+    axios.get('/packages')
+    .then(res => {
+      this.setState({packages: res.data.packages })
+    });
+  }
+
+  componentDidMount(){
+    this.loadPackagesFromServer();
+  }
 
   render () {
+
+    console.log(this.state.packages);
+
     return (
       <div className="services-container">
         <div className="services-wrapper" >
           <h1 className="services-header" >Select Your Plan</h1>
-          <div className="package-wrapper">
-            <div className="package-top">
-              <h2 className="package-header">Package One</h2>
-              <ul className="package-list-wrapper">
-                <li>Custom Training Plan</li>
-                <li>Weekly Check-ins</li>
-                <li>Testing</li>
-                <li>Testing</li>
-              </ul>
-              <h3 className="package-price">$150.00</h3>
-            </div>
-            <div className="package-bottom" >
-              <Link to="/services/packages/personal-form"><button className="button">Click Me</button></Link>
-            </div>
-          </div>
-          <div className="package-wrapper">
-            <div className="package-top" >
-              <h2 className="package-header">Package Two</h2>
-              <ul className="package-list-wrapper">
-                <li>Custom Training Plan</li>
-                <li>Weekly Check-ins</li>
-                <li>Testing</li>
-                <li>Testing</li>
-              </ul>            
-              <h3 className="package-price">$225.00</h3>
-            </div>
-            <div className="package-bottom" >
-              <Link to={'/services/packages/personal-form'}><button className="button" >Click Me</button></Link>
-            </div>
-          </div>
-          <div className="package-wrapper">
-            <div className="package-top">
-              <h2 className="package-header">Package Three</h2>
-              <ul className="package-list-wrapper">
-                <li>Custom Training Plan</li>
-                <li>Weekly Check-ins</li>
-                <li>Testing</li>
-                <li>Testing</li>
-              </ul>
-              <h3 className="package-price">$275.00</h3>              
-            </div>            
-            <div className="package-bottom">
-              <Link to={'/services/packages/personal-form'}><button className="button" >Click Me</button></Link>
-            </div>
-          </div>
-        </div>
-        <div className="services-parallex" >
-
+          {this.state.packages.map(packageItem => {
+           return <ServicePackageItem {...packageItem} key={packageItem._id} />
+          })}
         </div>
       </div>
     )
   }
 }
+
+export default connect()(Services);

@@ -71,9 +71,6 @@ class Home extends Component{
                         </li>
                         )
                       })}
-                      {/* <li className="nutrition-plan-benefits">Track your macronutrients</li>
-                      <li className="nutrition-plan-benefits">Understand the benefits of consuming different foods</li>
-                      <li className="nutrition-plan-benefits">Be social while tracking your macronutrients</li> */}
                     </ul>
                   </div>
               </Col>

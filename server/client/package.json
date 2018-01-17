@@ -8,6 +8,9 @@
     },
     "/services/packages/1/testing": {
       "target": "http://localhost:5000"
+    },
+    "/packages": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

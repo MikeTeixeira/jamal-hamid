@@ -3,6 +3,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const keys = require('./config/keys');
+
+//require in our Models
+require('./models/TrainingPackages');
+
+//Import dev/production keys to access DB
+mongoose.connect(keys.mongoURI);
 
 
 //instances
@@ -15,6 +22,7 @@ app.use(bodyParser.urlencoded());
 
 
 require('./routes/servicesRoutes')(app);
+require('./routes/packageRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
 

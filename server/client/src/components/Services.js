@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as actions from '../actions';
 import axios from 'axios';
 import ServicePackageItem from './ServicePackageItem';
 
@@ -9,7 +11,10 @@ import ServicePackageItem from './ServicePackageItem';
     super(props);
 
     this.state = {
-      packages: []
+      packages: [],
+      cart: {
+        name: props.cart 
+      }
     }
     this.loadPackagesFromServer = this.loadPackagesFromServer.bind(this);
   }
@@ -24,17 +29,20 @@ import ServicePackageItem from './ServicePackageItem';
   componentDidMount(){
     this.loadPackagesFromServer();
   }
+  
 
   render () {
 
-    console.log(this.state.packages);
-
+    const { addToCart } = this.props;
+    console.log(this.props);
     return (
       <div className="services-container">
+        
         <div className="services-wrapper" >
+          <div className="nutrition-plan-wrapper"></div>
           <h1 className="services-header" >Select Your Plan</h1>
           {this.state.packages.map(packageItem => {
-           return <ServicePackageItem {...packageItem} key={packageItem._id} />
+           return <ServicePackageItem handleAddToCart={addToCart} {...packageItem} key={packageItem._id} />
           })}
         </div>
       </div>
@@ -42,4 +50,14 @@ import ServicePackageItem from './ServicePackageItem';
   }
 }
 
-export default connect()(Services);
+const mapStateToProps = (state) => {
+  return {
+    cart: state.cart
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actions, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Services);

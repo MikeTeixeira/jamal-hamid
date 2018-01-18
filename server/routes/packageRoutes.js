@@ -1,8 +1,8 @@
-const TrainingPackages = require('../models/TrainingPackages');
+const ServicePackages = require('../models/ServicePackages');
 
 module.exports = (app) => {
   app.get("/packages", (req,res) => {
-    TrainingPackages.find((err, packages) => {
+    ServicePackages.find((err, packages) => {
       if (err) {
         res.send(err);
       }
@@ -12,14 +12,15 @@ module.exports = (app) => {
   })
 
   app.post("/packages", (req,res) => {
-    const trainingPackage = new TrainingPackages();
+    const servicePackage = new ServicePackages();
 
-      trainingPackage.name = req.body.name;
-      trainingPackage.price = req.body.price;
-      trainingPackage.status = req.body.status;
-      trainingPackage.quantity = req.body.quantity;
+      servicePackage.name = req.body.name;
+      servicePackage.price = req.body.price;
+      servicePackage.status = req.body.status;
+      servicePackage.quantity = req.body.quantity;
+      servicePackage.description = req.body.description
 
-      trainingPackage.save((err, trainingPackage) => {
+      servicePackage.save((err, servicePackage) => {
         if(err) {
           res.send(err);
         }

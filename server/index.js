@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 
 //require in our Models
-require('./models/TrainingPackages');
+require('./models/ServicePackages');
 
 //Import dev/production keys to access DB
 mongoose.connect(keys.mongoURI);

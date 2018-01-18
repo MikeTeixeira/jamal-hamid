@@ -1,6 +1,8 @@
 import axios from 'axios';
-import { QUESTIONNAIRE_SUBMIT, NEXT_PAGE, PREVIOUS_PAGE } from './types';
+import { QUESTIONNAIRE_SUBMIT, NEXT_PAGE, PREVIOUS_PAGE, ADD_TO_CART } from './types';
 
+
+//----------FORM ACTIONS--------//
 
 //Submit
 export const onQuestionnaireSubmit = () => async dispatch => {
@@ -21,3 +23,11 @@ export const nextPage = (payload) => {
     type: NEXT_PAGE,
   }
 }
+
+//-----------CART ACTIONS-----------//
+ export const addToCart = (cartItems) => {
+   return {
+     type: ADD_TO_CART,
+     cartItems
+   }
+ }

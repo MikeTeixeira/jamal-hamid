@@ -45,7 +45,8 @@
 
     .nav-link-wrapper {
       height: 64px;
-      margin-left: 500px;
+      margin-left: 300px;
+      position: relative;
     }
 
     .logo_wrapper {
@@ -98,6 +99,18 @@
 
     .social-icon:hover {
       transform: scale(1.2);
+    }
+
+    .cart-header-wrapper {
+      position: absolute;
+      height: 30px;
+      width: 27.8px;
+      left: 840px;
+      bottom: 30px;
+    }
+
+    .cartIcon-header {
+      cursor: pointer;
     }
 
     .hamburger {

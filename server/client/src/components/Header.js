@@ -64,6 +64,9 @@ class Header extends Component  {
               <li className="nav_li"><Link className="nav_a" to={'/about'}> About </Link></li>
               <li className="nav_li"><Link className="nav_a" to={'/services'}> Services </Link></li>
               <li className="nav_li"><Link className="nav_a" to={'/testimonials'}> Testimonials </Link></li>
+              <div className="cart-header-wrapper">
+                  <FontAwesome className="cartIcon-header" style={{color: "black"}} name="shopping-cart" size='2x' />
+              </div>
             </div>
           </div>
         </nav>

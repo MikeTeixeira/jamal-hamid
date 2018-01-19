@@ -7,6 +7,7 @@ import Services from './Services'
 import Testimonials from './Testimonials'
 import Questionnare from './services/Questionnare';
 import WizardForm from './servicesWizardForm/WizardForm';
+import Cart from './checkout/Cart';
 import BottomFooter from './BottomFooter';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route path='/testimonials' component={Testimonials} />
             <Route exact={true} path='/services/packages/:id' component={Questionnare}/>
             <Route path='/services/packages/1/testing' component={WizardForm} />
+            <Route path='/cart' component={Cart} />
           </div>
         </BrowserRouter>
         <BottomFooter />

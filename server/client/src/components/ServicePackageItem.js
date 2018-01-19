@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+
 export default class ServicePackageItem extends Component {
   constructor(props){
     super(props);
@@ -8,27 +9,22 @@ export default class ServicePackageItem extends Component {
     this.handleToCart = this.handleToCart.bind(this);
   }
 
-  // shouldComponentUpdate(nextProps){
-  //   return (this.props.addToCart !== nextProps.payload);
-  // }
 
-  handleToCart(event){
-    const { handleAddToCart, name, price, quantity, status } = this.props;
+  handleToCart(e){
+    const { handleAddToCart, name, price, quantity, status, _id } = this.props;
 
-    while(status && quantity > 0){
       const userCart = {
         name,
         price,
-        quantity 
+        quantity,
+        _id 
       }
-    return handleAddToCart(userCart);
+        return handleAddToCart(userCart);
     }
-  }
 
   render(){
 
     const { name, price, status, quantity, description, handleAddToCart, _id } = this.props;
-
 
     return (
           <div className="package-wrapper">

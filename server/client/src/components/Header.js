@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 var FontAwesome = require('react-fontawesome');
 
 class Header extends Component  {
@@ -11,6 +12,7 @@ class Header extends Component  {
     }
 
     this.onToggle = this.onToggle.bind(this);
+    this.handleHasItemsInCart = this.handleHasItemsInCart.bind(this);
   }
   
 
@@ -26,9 +28,17 @@ class Header extends Component  {
     }
   }
 
+  handleHasItemsInCart(){
+
+  }
+
   render() {
 
-    const email = 'jamalhamid558@gmail.com'
+    const email = 'jamalhamid558@gmail.com';
+
+    console.log(this.props.cartTotal.length);
+
+    const { cartTotal } = this.props; 
 
     return (
       <div>
@@ -65,7 +75,8 @@ class Header extends Component  {
               <li className="nav_li"><Link className="nav_a" to={'/services'}> Services </Link></li>
               <li className="nav_li"><Link className="nav_a" to={'/testimonials'}> Testimonials </Link></li>
               <div className="cart-header-wrapper">
-                  <FontAwesome className="cartIcon-header" style={{color: "black"}} name="shopping-cart" size='2x' />
+                  <Link to="/cart"><FontAwesome className="cartIcon-header" style={{color: "black"}} name="shopping-cart" size='2x' /></Link>
+                  { cartTotal ? <span className="cart-totalItems">({cartTotal.length})</span> : "" }
               </div>
             </div>
           </div>
@@ -75,4 +86,8 @@ class Header extends Component  {
   }
 }
 
-export default Header
+const mapStateToProps = (state) =>{
+  return { cartTotal: state.cart }
+}
+
+export default connect(mapStateToProps)(Header);

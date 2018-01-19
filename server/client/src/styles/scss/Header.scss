@@ -113,6 +113,13 @@
       cursor: pointer;
     }
 
+    .cart-totalItems {
+      position: relative;
+      color: black;
+      bottom: 70px;
+      left: 30px;
+    }
+
     .hamburger {
       visibility: hidden;
       position: absolute; 

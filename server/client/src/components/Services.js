@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as actions from '../actions';
 import axios from 'axios';
 import ServicePackageItem from './ServicePackageItem';
+import {loadState, saveState} from './localStorage/localStorage';
 
 
  class Services extends React.Component {
@@ -12,9 +13,6 @@ import ServicePackageItem from './ServicePackageItem';
 
     this.state = {
       packages: [],
-      cart: {
-        name: props.cart 
-      }
     }
     this.loadPackagesFromServer = this.loadPackagesFromServer.bind(this);
   }
@@ -34,10 +32,8 @@ import ServicePackageItem from './ServicePackageItem';
   render () {
 
     const { addToCart } = this.props;
-    console.log(this.props);
     return (
       <div className="services-container">
-        
         <div className="services-wrapper" >
           <div className="nutrition-plan-wrapper"></div>
           <h1 className="services-header" >Select Your Plan</h1>

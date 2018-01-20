@@ -13,13 +13,12 @@ export default class ServicePackageItem extends Component {
   handleToCart(e){
     const { handleAddToCart, name, price, quantity, status, _id } = this.props;
 
-      const userCart = {
-        name,
-        price,
-        quantity,
-        _id 
-      }
+    if(status && quantity > 0){
+
+
+      const userCart = {name,price,quantity,_id};
         return handleAddToCart(userCart);
+      }
     }
 
   render(){

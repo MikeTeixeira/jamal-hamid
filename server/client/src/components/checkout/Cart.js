@@ -12,28 +12,29 @@ class Cart extends Component {
   orderTotal(){
     const { cart } = this.props;
     let total = 0;
-
-    cart.map(itemPrice => {
-      const { price } = itemPrice;
-      total += parseInt(price);
-    });
+      if(cart.length > 0){
+      cart.map(itemPrice => {
+        const { price } = itemPrice;
+        total += parseInt(price);
+      });
+      return total;
+    };
     return total;
-  };
+  }
 
   render(){
     const { cart } = this.props;
 
+    console.log(cart);
     console.log(this.orderTotal());
 
     return(
       <form>
         <h1>Your Products</h1>
-        {/* {cart.map(cartItem => {
+        { cart.length > 0 ? cart.map((cartItem, id) => {
           const { name, price, quantity } = cartItem;
-          return <div>
-
-          </div>
-        })} */}
+          return <div key={id}>{name}</div>
+        }) : ""}
       </form>
     )
   }

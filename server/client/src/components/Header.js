@@ -12,7 +12,7 @@ class Header extends Component  {
     }
 
     this.onToggle = this.onToggle.bind(this);
-    this.handleHasItemsInCart = this.handleHasItemsInCart.bind(this);
+    this.onCartItemAdded = this.onCartItemAdded.bind(this);
   }
   
 
@@ -28,8 +28,23 @@ class Header extends Component  {
     }
   }
 
-  handleHasItemsInCart(){
+  onCartItemAdded(){
+    const { cartTotal } = this.props;
 
+    const renderAfterCartSuccess =  setTimeout(() => {
+      <div>hello</div>
+    }, 3000);
+
+    if(cartTotal.length > 0){
+      let currentCartTotal = cartTotal.length;
+      if(currentCartTotal < cartTotal.length){
+        currentCartTotal++;
+        return renderAfterCartSuccess;
+          //  return <div style={{display: 'hidden'}} className="cart-item-added">
+          //   <h2>Item has been successfully added to your cart</h2>
+          //  </div>
+      }
+    }
   }
 
   render() {
@@ -76,7 +91,8 @@ class Header extends Component  {
               <li className="nav_li"><Link className="nav_a" to={'/testimonials'}> Testimonials </Link></li>
               <div className="cart-header-wrapper">
                   <Link to="/cart"><FontAwesome className="cartIcon-header" style={{color: "black"}} name="shopping-cart" size='2x' /></Link>
-                  { cartTotal ? <span className="cart-totalItems">({cartTotal.length})</span> : "" }
+                  { cartTotal.length >= 0 ? <span className="cart-totalItems">({cartTotal.length})</span> : "" }
+                  {this.onCartItemAdded()}
               </div>
             </div>
           </div>

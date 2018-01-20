@@ -136,6 +136,24 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/server\/client\/src\/components\/checkout\/Cart.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/server\/client\/src\/components\/checkout\/Cart-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/server\/client\/src\/components\/checkout\/Checkout.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/server\/client\/src\/components\/checkout\/Checkout-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/server\/client\/src\/components\/Header.js": {
 		"ft": 64,
 		"mi": 0,
@@ -150,6 +168,24 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/server\/client\/src\/components\/Home-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/server\/client\/src\/components\/localStorage\/localStorage.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/server\/client\/src\/components\/localStorage\/localStorage-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/server\/client\/src\/components\/ServicePackageItem.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/server\/client\/src\/components\/ServicePackageItem-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -253,6 +289,59 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/server\/client\/src\/images\/chris-weidman.png": {
+		"ft": 32768,
+		"iS": 115109,
+		"oA": 0,
+		"oAP": "\/server\/client\/src\/images\/chris-weidman.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/server\/client\/src\/images\/eddie-gordon-testimonial.jpg": {
+		"ft": 16384,
+		"iS": 8089,
+		"oA": 0,
+		"oAP": "\/server\/client\/src\/images\/eddie-gordon-testimonial.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/server\/client\/src\/images\/eddie-gordon.png": {
+		"ft": 32768,
+		"iS": 123214,
+		"oA": 0,
+		"oAP": "\/server\/client\/src\/images\/eddie-gordon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/server\/client\/src\/images\/jamal-chris.jpg": {
+		"ft": 16384,
+		"iS": 221617,
+		"oA": 0,
+		"oAP": "\/server\/client\/src\/images\/jamal-chris.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/server\/client\/src\/images\/jamal-hamid-home-service.png": {
+		"ft": 32768,
+		"iS": 407274,
+		"oA": 0,
+		"oAP": "\/server\/client\/src\/images\/jamal-hamid-home-service.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/server\/client\/src\/images\/jamal_hamid_banner.jpeg": {
 		"ft": 16384,
 		"iS": 384465,
@@ -278,6 +367,15 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/server\/client\/src\/index-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/server\/client\/src\/reducers\/cartReducer.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/server\/client\/src\/reducers\/cartReducer-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -328,6 +426,19 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/server\/client\/src\/styles\/scss\/_App.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/server\/client\/src\/styles\/scss\/_App.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/server\/client\/src\/styles\/scss\/_Keyframes.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -337,19 +448,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/server\/client\/src\/styles\/scss\/_Keyframes.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/server\/client\/src\/styles\/scss\/App.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/server\/client\/src\/styles\/scss\/App.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -395,7 +493,7 @@
 		},
 	"\/server\/client\/src\/styles\/scss\/index.scss": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -478,20 +576,20 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"\/server\/index-min.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/server\/index-min-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"\/server\/index.js": {
 		"ft": 64,
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/server\/index-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/server\/models\/ServicePackages.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/server\/models\/ServicePackages-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -535,6 +633,15 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/server\/routes\/packageRoutes.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/server\/routes\/packageRoutes-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
 		},
 	"\/server\/routes\/servicesRoutes.js": {
 		"ft": 64,
@@ -2339,15 +2446,15 @@
 		"quality": 100
 		},
 	"languageDefaultsJS": {
-		"autoOutputAction": 1,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 0,
-		"syntaxCheckerStyle": 0,
+		"minifyOutput": 1,
+		"syntaxCheckerStyle": 1,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
@@ -2445,7 +2552,7 @@
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
-		"outputStyle": 3,
+		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 1
@@ -2523,7 +2630,7 @@
 			"flagValue": -1
 			},
 		"booleans": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"bracketize": {
@@ -2531,23 +2638,23 @@
 			"flagValue": -1
 			},
 		"cascade": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"comparisons": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"compress": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"conditionals": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"dead_code": {
@@ -2559,7 +2666,7 @@
 			"flagValue": -1
 			},
 		"drop_debugger": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"eval": {
@@ -2567,11 +2674,11 @@
 			"flagValue": -1
 			},
 		"evaluate": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"hoist_funs": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"hoist_vars": {
@@ -2579,7 +2686,7 @@
 			"flagValue": -1
 			},
 		"if_return": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"indent-level": {
@@ -2595,7 +2702,7 @@
 			"flagValue": -1
 			},
 		"join_vars": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -2607,23 +2714,23 @@
 			"flagValue": -1
 			},
 		"loops": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"mangle": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"max-line-len": {
-			"active": 0,
+			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"properties": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"pure_getters": {
@@ -2635,15 +2742,15 @@
 			"flagValue": -1
 			},
 		"screw-ie8": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"sequences": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"sort": {
@@ -2651,7 +2758,7 @@
 			"flagValue": -1
 			},
 		"space-colon": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"support-ie8": {
@@ -2675,7 +2782,7 @@
 			"flagValue": -1
 			},
 		"width": {
-			"active": 0,
+			"active": 1,
 			"flagValue": 80
 			}
 		},

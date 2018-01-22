@@ -44,6 +44,28 @@
   }
 }
 
+@keyframes fadeInNOut {
+  0% {
+    opacity: 0
+  }
+
+  25% {
+    opacity: .5
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  75% {
+    opacity: .5
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
 //--------- CALL TO ACTION ----------//
 
 @keyframes hover {

@@ -12,9 +12,11 @@
     .nav_li {
       display: inline-block;
       list-style: none;
-      margin-left: 40px;
       text-transform: uppercase;
       animation: topToBottom 1s;
+      height: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     .nav_a{
@@ -27,8 +29,17 @@
     }
 
     .nav_a:hover {
-      color: $blood;
-      border-bottom: 2px solid $blood;
+      border-bottom: 2px solid black;
+      -webkit-transition: .5s all;
+      -moz-transition: .5s all;
+      -ms-transition: .5s all;
+      -o-transition: .5s all;
+      transition: .5s all;
+    }
+
+    .nav_li:hover{
+      background-color: $blood;
+      opacity: .9;
       -webkit-transition: .5s all;
       -moz-transition: .5s all;
       -ms-transition: .5s all;
@@ -122,6 +133,12 @@
 
     .cart-item-added {
       position: relative;
+    }
+
+    .testingClass {
+      position: relative;
+      left: 100px;
+      animation: fadeInNOut 5s;
     }
 
     .hamburger {

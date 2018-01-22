@@ -1,59 +1,17 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-var FontAwesome = require('react-fontawesome');
+import FontAwesome from 'react-fontawesome';
 
 class Header extends Component  {
   constructor(props){
     super(props);
-
-    this.state = {
-      addClass: 'closed' 
-    }
-
-    this.onToggle = this.onToggle.bind(this);
-    this.onCartItemAdded = this.onCartItemAdded.bind(this);
-  }
-  
-
-  onToggle = () => {
-    if(this.state.addClass === 'closed'){
-      this.setState({
-        addClass: 'open'
-      })
-    } else {
-      this.setState({
-        addClass: 'closed'
-      })
-    }
   }
 
-  onCartItemAdded(){
-    const { cartTotal } = this.props;
-
-    const renderAfterCartSuccess =  setTimeout(() => {
-      <div>hello</div>
-    }, 3000);
-
-    if(cartTotal.length > 0){
-      let currentCartTotal = cartTotal.length;
-      if(currentCartTotal < cartTotal.length){
-        currentCartTotal++;
-        return renderAfterCartSuccess;
-          //  return <div style={{display: 'hidden'}} className="cart-item-added">
-          //   <h2>Item has been successfully added to your cart</h2>
-          //  </div>
-      }
-    }
-  }
 
   render() {
 
     const email = 'jamalhamid558@gmail.com';
-
-    console.log(this.props.cartTotal.length);
-
-    const { cartTotal } = this.props; 
 
     return (
       <div>
@@ -91,8 +49,6 @@ class Header extends Component  {
               <li className="nav_li"><Link className="nav_a" to={'/testimonials'}> Testimonials </Link></li>
               <div className="cart-header-wrapper">
                   <Link to="/cart"><FontAwesome className="cartIcon-header" style={{color: "black"}} name="shopping-cart" size='2x' /></Link>
-                  { cartTotal.length >= 0 ? <span className="cart-totalItems">({cartTotal.length})</span> : "" }
-                  {this.onCartItemAdded()}
               </div>
             </div>
           </div>

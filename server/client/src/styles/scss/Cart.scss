@@ -1,0 +1,61 @@
+.cart-container {
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.cart-wrapper {
+  background-color: white;
+  display: flex;
+  position: relative;
+  padding-top: 200px;
+}
+
+.checkout-progress-circle {
+  border-radius: 50%;
+  border: 3px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: $red;
+  z-index: 2;
+  position: relative;
+}
+
+.checkout-progress-bar {
+  height: 20px;
+  width: 300px;
+  border: 3px solid black;
+  background-color: $red;
+      position: relative;
+    left: 30px;
+    z-index: 1;
+    bottom: 35px;
+}
+
+.cart-table {
+  flex: 2;
+  width: 800px;
+  margin-bottom: 100px;
+}
+
+.cart-table-inner {
+  padding: 40px 10px 10px 50px;
+}
+
+.cart-right-col {
+  flex: 1;
+}
+
+.cart-checkout-next {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+    top: 80%;
+}
+
+.button-holder {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}

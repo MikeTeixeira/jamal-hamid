@@ -7,7 +7,6 @@ import reduxThunk from 'redux-thunk';
 import './styles/css/index.css';
 import reducers from './reducers';
 import {Preloader} from 'react-materialize';
-import { loadState, saveState } from './components/localStorage/localStorage';
 import {PersistGate} from 'redux-persist/lib/integration/react'
 import storage from 'redux-persist/lib/storage'
 
@@ -26,7 +25,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, reducers);
 
-let store = createStore(persistedReducer);
+let store = createStore((persistedReducer),window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 let persistor = persistStore(store);
 
 //------------------------//

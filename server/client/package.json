@@ -11,6 +11,9 @@
     },
     "/packages": {
       "target": "http://localhost:5000"
+    },
+    "/cart/checkout": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

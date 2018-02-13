@@ -1,12 +1,19 @@
 
   @media #{$extra-large-and-up} {
-    nav {
-      height: 80px;
+
+    .header-test {
+      position: fixed;
+      width: 1440px;
+      z-index: 15;
+    }
+
+    .nav {
       text-align: center;
       background-color: white !important;
       -webkit-box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
       -moz-box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
       box-shadow: 0px 0px 81px 17px rgba(0, 0, 0, 0.38);
+      z-index: 2;
     }
 
     .nav_li {
@@ -17,6 +24,7 @@
       height: 100%;
       padding-left: 15px;
       padding-right: 15px;
+      padding-top: 20px;
     }
 
     .nav_a{
@@ -24,7 +32,6 @@
       color: $black;
       font-size: 20px;
       font-weight: bold;
-      font-family: "ApleTime";
       letter-spacing: .18em;
     }
 
@@ -84,6 +91,7 @@
       width: 1200px;
       margin: 0 auto;
       padding: 1px;
+      scroll-snap-type: mandatory;
     }
 
     .envelope {
@@ -117,11 +125,16 @@
       height: 30px;
       width: 27.8px;
       left: 840px;
-      bottom: 30px;
+      bottom: 20px;
     }
 
     .cartIcon-header {
       cursor: pointer;
+    }
+
+    .cartIcon-header:hover {
+      transform: scale(1.3);
+      transition-duration: 1s;
     }
 
     .cart-totalItems {
@@ -143,61 +156,30 @@
 
     .hamburger {
       visibility: hidden;
-      position: absolute; 
     }   
   }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
-/* Portrait and Landscape */
-// @media only screen 
-//   and (min-device-width: 320px) 
-//   and (max-device-width: 568px)
-//   and (-webkit-min-device-pixel-ratio: 2) {
-//     nav {
-//       background-color: rgba(0, 0, 0, 0.8);
-//     }
-//     .nav_li {
-//       display: block;
-//       color: white;
-//       font-size: 30px;
-//       padding-top: 80px;
-//       margin-left: 0px;
-//     }
+@media#{$small-and-down}{
 
-//     .closed {
-//       position: absolute;
-//       background-color: white;
-//       top: -800px;
-//       transition: .4s all;
-//       width: 100%;
-//       z-index: 1;
-//     }
+  .header-container {
 
-//     .open {
-//       position: absolute;
-//       top: 0px;
-//       height: 578px;
-//       transition: .7s all;
-//       width: 102%;
-//       z-index: 1;
-//     }
+  }
 
-//     .social_media_wrapper {
-//       font-size: 20px;
-//       margin-left: 30px;
-//       margin-top: 50px;
-//       width: 20px;
-//     }
 
-//     .hamburger {
-//       position: absolute;
-//       visibility: visible;
-//       left: 255px;
-//       z-index: 2;
-//     }
+  .header-test {
+    visibility: hidden;
+    position: absolute;
+  }
 
-//     .logo_wrapper {
-//       visibility: hidden;
-//     }
-//}
+  .hamburger-test {
+    position: fixed;
+    color: white;
+    z-index: 30;
+  }
+
+  .hamburger {
+    visibility: visible;
+  }
+}

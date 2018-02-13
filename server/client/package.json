@@ -14,6 +14,9 @@
     },
     "/cart/checkout": {
       "target": "http://localhost:5000"
+    },
+    "/cart/checkout/edit": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {
@@ -30,12 +33,14 @@
     "react-materialize": "^1.1.2",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-router-transition": "^1.2.1",
     "react-scripts": "1.0.17",
     "react-scroll": "^1.7.5",
     "redux": "^3.7.2",
     "redux-form": "^7.2.0",
     "redux-form-material-ui": "^4.3.2",
     "redux-persist": "^5.4.0",
+    "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "uuid": "^3.1.0",
     "uuid4": "^1.0.0"

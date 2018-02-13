@@ -1,55 +1,69 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import axios from 'axios';
+import * as actions from '../actions';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 
-export default class ServicePackageItem extends Component {
+class ServicePackageItem extends Component {
   constructor(props){
     super(props);
 
-    this.handleToCart = this.handleToCart.bind(this);
-    this.onHandleToCart = this.onHandleToCart.bind(this);
-  }
-
-
-  handleToCart(e){
-    const { handleAddToCart, name, price, quantity, status, _id } = this.props;
-
-    if(status && quantity > 0){
-
-
-      const userCart = {name,price,quantity,_id};
-        return handleAddToCart(userCart);
-      }
+    this.state = {
+      quantity: 0
     }
+
+    this.onHandleToCart = this.onHandleToCart.bind(this);
+    this.onClickHandleQuantity = this.onClickHandleQuantity.bind(this);
+  }
 
     onHandleToCart(e){
       e.preventDefault();
 
-      const { name, price } = this.props;
+      if(this.state.quantity){
 
-      axios.post('/cart/checkout', {name, price}).then(function(response){
-        console.log({success: response.data })
-      }).catch(function(error){
-        console.log(error)
-      })
+        const { name, price, _id, 
+                available, currentlySold, 
+                packagesInCart, maxQuantity, 
+                cartDataFetched } = this.props;
+        const { quantity } = this.state;
+
+        axios.post('/cart/checkout', {
+          name, 
+          price, 
+          _id, 
+          quantity,available, currentlySold, packagesInCart, maxQuantity, cartDataFetched })
+        .then(function(response){
+          console.log({success: response.data });
+        }).catch(function(error){
+          console.log(error)
+        })
+      }
+    }
+
+    onClickHandleQuantity(){
+      return (
+        this.setState({
+          quantity: this.state.quantity+=1
+        })
+      )
     }
 
   render(){
 
-    const { name, price, status, quantity, description, handleAddToCart, _id } = this.props;
-
+    const { name, price, status, currentlySold, maxQuantity, description, _id } = this.props;
     return (
           <div className="package-wrapper">
-            <form method='post' action='/cart/checkout' onSubmit={((e) => this.onHandleToCart(e))} >
-            <input type="hidden" name={name} />
+            <form id="cartForm" action='/cart/checkout' onSubmit={((e) => this.onHandleToCart(e))} method='post' >
             <div className="package-top">
               <h2 className="package-header">{name}</h2>
               <h3 className="package-price">${price}</h3>
-              <input type="hidden" name={price} />
+              <input id="quantity" type="hidden" name="quantity" value={this.state.quantity} />
             </div>
             <div className="package-bottom" >
-                <button type='submit' className="btn-cta button">Add To Cart</button>           
+              { currentlySold <= maxQuantity ?
+                  <button type='submit' onClick={this.onClickHandleQuantity} className="btn-cta button">Add To Cart</button>
+                  : <button disabled={true} className="btn-cta button" >Out of Stock</button> }           
               {/* <Link to="/services/packages/personal-form"><button className="button">Click Me</button></Link> */}
             </div>
             </form>
@@ -57,3 +71,13 @@ export default class ServicePackageItem extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return { cart: state}
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actions, dispatch);
+}
+
+export default connect(mapStateToProps, actions)(ServicePackageItem);

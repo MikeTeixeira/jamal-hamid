@@ -1,0 +1,56 @@
+.testimonial-container {
+  padding-top: 100px;
+}
+
+.testimonial-header-wrapper {
+  padding-bottom: 200px;
+}
+
+.testimonial-header {
+  margin : 0 auto;
+  position: relative;
+  top: 100px;
+  width: 90%;
+  text-align: center;
+  font-family: "ApleTime";
+  font-size: 40px;
+}
+
+.testimonial-content {
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background: white;
+}
+
+.testimonial-row {
+
+}
+
+//--------------------TESTIMONIAL CLIENT --------------//
+
+.testimonial-client-wrapper {
+  max-width: 1200px;
+}
+
+.testimonials {
+  display: flex;
+  margin: 30px;
+}
+
+.testimonials-left, .testimonial-right {
+  flex: 1;
+}
+
+.testimonials-left{
+  max-width: 800px;
+}
+
+.testimonial-info{
+  width: 600px;
+}
+
+.testimonial-name, .testimonial-info{
+  margin: 0;
+}
+

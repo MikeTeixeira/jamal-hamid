@@ -33,7 +33,9 @@ import ServicePackageItem from './ServicePackageItem';
           <div className="nutrition-plan-wrapper"></div>
           <h1 className="services-header" >Select Your Plan</h1>
           {this.state.packages.map(packageItem => {
-           return <ServicePackageItem {...packageItem} key={packageItem._id} />
+           return (
+             <ServicePackageItem {...packageItem} key={packageItem._id} />
+            )
           })}
         </div>
       </div>

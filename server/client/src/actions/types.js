@@ -1,3 +1,11 @@
 export const QUESTIONNAIRE_SUBMIT = "questionnaire_submit";
 export const NEXT_PAGE = "next_page";
 export const PREVIOUS_PAGE = "previous_page";
+export const CART_DATA_FETCHED = "cart_data_fetched";
+export const ADD_TO_CART = "add_to_cart";
+export const ADD_ITEM_SUCCESS = "add_item_success";
+export const ADD_ITEM_FAILURE = "add_item_failure";
+export const REMOVE_ITEM_FROM_CART = "remove_item_from_cart";
+export const UPDATE_CART_TOTAL = "update_cart_total";
+export const UPDATE_CART = "update_cart";
+export const CHECKOUT_FORM_SUBMIT = "checkout_form_submit";

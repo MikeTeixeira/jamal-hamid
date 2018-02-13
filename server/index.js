@@ -44,16 +44,17 @@ app.use(session({
   genId: function (req) {
     return uuidv4();
   },
-  secret: '901249UB918FBASF91214T0B',
+  secret: keys.secretSession,
   cookie: {
-    maxAge: 600000,
+    maxAge: keys.maxAge,
   },
   resave: true,
   saveUninitialized: true
 }));
 
 
-app.get('/', function(req, res){
+app.get('/cart/checkout', function(req, res){
+
   res.send(req.session);
 });
 

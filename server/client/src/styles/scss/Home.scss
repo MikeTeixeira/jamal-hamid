@@ -1,16 +1,336 @@
-.home-wrapper-banner {
-  max-height: 600px;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  position: relative;
-  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
+@media#{$extra-large-and-up}{
+
+  .home-wrapper-banner {
+    max-height: 820px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 100px;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
+  }
+
+
+  .banner_coat {
+    background-image: url('../../images/jamal_hamid_banner.jpeg');
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 1000px;
+      width: 2840px;
+      position: relative;
+      top: -100px;
+      left: -700px;
+      overflow-y: 500px;
+      animation: onLoad 4s;
+  }
+
+  .banner_text_wrapper {
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    color: $blood;
+    font-size: 70px;
+    font-family: "Fjalla One";
+    width: 1440px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .slogan {
+    position: relative;
+    font-size: 90px;
+  }
+
+  .left-banner__slogan {
+    top: 30px;
+    left: 100px;
+    animation: leftToRight 4s;
+  }
+
+  .right-banner__slogan {
+    top: 30px;
+    left: 30px;
+    animation: leftToRight 4s;
+  }
+
+  .training_package_wrapper {
+  position: relative
+  }
+
+  .training_package__text {
+    font-size: 30px;
+    position: absolute;
+    left: 1000px;
+    margin: 0;
+    color: $blood;
+    top: 150px;
+    animation: onLoad 6s;
+  }
+
+  .home_banner-cta{
+    position:absolute;
+    left: 1030px;
+    top: 200px;
+    animation: onLoad 6s;
+    font-size: 20px;
+    background-color: $blood;
+  }
+
+  .btn-cta {
+    border-radius: 8px;
+    background-color: $blood;
+    color: #fff;
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-name: hover;
+    animation-name: hover;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    &:hover {
+      background-color: $blood;
+    }
+  }
+
+//-------------- AFTER LANDING PAGE BANNER ------------//
+
+  .home-about-wrapper {
+    width: 1440px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  div.col.s1.home-about-icon-col, div.col.s2.home-about-content-col {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-about-icon {
+    text-align: center;
+  }
+
+  div.col.s2.home-about-content-col {
+    padding-top: 25px;
+    line-height: $large-height;
+  }
+
+//----------HOME SERVICES HEADER-------------//
+  .home-about-header {
+    font-family: "ApleTime";
+    margin: 0;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+//-----------HOME SERVICES ROW--------------//
+
+  .home-about-row {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    width: 1220px;
+  }
+
+  .home-about-info {
+    width: 350px;
+    margin: 0 auto;
+    font-size: $medium-font;
+    line-height: 1.7em;
+  }
+
+//-----------NUTRITION PLAN SERVICES-------------//
+
+  .nutrition-plan-benefits-wrapper {
+      text-align: left;
+      font-size: 20px;
+      width: 300px;
+      margin: 20px auto;
+  }
+
+  .nutrition-plan-benefits {
+    margin: 10px auto;
+  }
+
+//-------------JOIN ME BANNER-------------//
+
+  .join-me-banner{
+    background-image: url('../../images/services-parallex.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+//----------HOME SERVICES ----------------//
+
+  div.row.home-services-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+
+  .home-jamal-hamid__fadeAnimation {
+    background-image: url("../../images/jamal-hamid-home-service.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 510px;
+    margin: 0;
+  }
+
+  .home-services-title-wrapper {
+    font-family: "ApleTime";
+    color: $blood;
+    letter-spacing: .4em;
+    margin: 0 auto;
+  }
+
+  .home-services-title {
+    text-align: center;
+    letter-spacing: .2em;
+  }
+
+  .home-services-includes-wrapper {
+    padding-top: 50px;
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  .home-services-includes {
+    font-size: $medium-font;
+    color: white;
+    margin-left: 20px;
+  }
+
+  .home-services-button-wrapper {
+    margin: 40px auto;
+  }
+
+//----------HOME TESTIMONIAL --------------//
+
+  .home-testimonial-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 300px;
+    position: relative;
+  }
+
+  .home-testimonial-team-hamid {
+    margin: 0 auto;
+    font-size: $xxxx-large;
+    color: $blood;
+    font-family: "ApleTime";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 600px;
+    text-align: center;
+    top: 100px;
+    letter-spacing: .3em;
+
+  }
+
+//-----------EDDIE GORDON TESTIMONIAL -----------//
+
+  .home-testimonial__fadeInRight {
+    background-image: url("../../images/eddie-gordon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+  }
+
+
+
+//-----------CHRIS WEIDMAN TESTIMONIAL--------//
+
+
+  .home-chris-weidman-wrapper {
+    text-align: center;
+    max-height: 670px;
+    overflow-y: hidden;
+    padding-top: 100px;
+  }
+
+  .home-testimonial__fadeInLeft {
+    background-image: url("../../images/chris-weidman.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 1440px;
+    color: white;
+    animation: leftToRight 1s;
+    margin: auto;
+  }
+
+//------------TESTIMONIAL CONTENT------------//
+
+
+  .home-testimonial-title {
+    font-family: "ApleTime";
+    letter-spacing: .4em;
+    color: $blood;
+  }
+
+  .home-testimonial-text {
+    padding: 30px 50px;
+    line-height: 3em;
+    font-size: 16px;
+    color: white;
+  }
+
+  #home-test-jamal-hamid {
+    color: $blood;
+    font-size: 30px;
+  }
 }
 
 
-.banner_coat {
-  background-image: url('../../images/jamal_hamid_banner.jpeg');
+//-------------SMALL DEVICES AND BELOW 600PX --------------//
+
+@media#{$small-and-down}{
+
+  .home-wrapper-banner {
+    max-height: 820px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 100px;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.38);
+  }
+
+  .banner_coat {
+    background-image: url('../../images/jamal_hamid_banner.jpeg');
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,290 +341,60 @@
     left: -700px;
     overflow-y: 500px;
     animation: onLoad 4s;
-}
+  }
 
-.banner_text_wrapper {
-  margin: 0;
-  position: absolute;
-  z-index: 1;
-  color: $blood;
-  font-size: 70px;
-  font-family: "Fjalla One";
-  width: 1440px;
-  height: 800px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+  .banner_text_wrapper {
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    color: $blood;
+    font-size: 70px;
+    font-family: "Fjalla One";
+    width: 1440px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-.slogan {
-  position: relative;
-  font-size: 90px;
-}
+  .slogan {
+    position: relative;
+    font-size: 90px;
+  }
 
-.left-banner__slogan {
-  top: 30px;
-  left: 100px;
-  animation: leftToRight 4s;
-}
+  .left-banner__slogan {
+    top: 30px;
+    left: 100px;
+    animation: leftToRight 4s;
+  }
 
-.right-banner__slogan {
-  top: 30px;
-  left: 30px;
-  animation: leftToRight 4s;
-}
+  .right-banner__slogan {
+    top: 30px;
+    left: 30px;
+    animation: leftToRight 4s;
+  }
 
-.training_package_wrapper {
-position: relative
-}
+  .training_package_wrapper {
+    position: relative
+  }
 
-.training_package__text {
-  font-size: 30px;
-  position: absolute;
-  left: 1000px;
-  margin: 0;
-  color: $blood;
-  top: 150px;
-  animation: onLoad 6s;
-}
+  .training_package__text {
+    font-size: 30px;
+    position: absolute;
+    left: 1000px;
+    margin: 0;
+    color: $blood;
+    top: 150px;
+    animation: onLoad 6s;
+  }
 
-.home_banner-cta{
-  position:absolute;
-  left: 1030px;
-  top: 200px;
-  animation: onLoad 6s;
-  font-size: 20px;
-  background-color: $blood;
-}
-
-.btn-cta {
-  border-radius: 8px;
-  background-color: $blood;
-  color: #fff;
-  font-family: 'Indie Flower', cursive;
-  font-size: 22px;
-  font-weight: normal;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transform: translateY(-6px);
-  -ms-transform: translateY(-6px);
-  transform: translateY(-6px);
-  -webkit-animation-name: hover;
-  animation-name: hover;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-  &:hover {
+  .home_banner-cta {
+    position: absolute;
+    left: 1030px;
+    top: 200px;
+    animation: onLoad 6s;
+    font-size: 20px;
     background-color: $blood;
   }
-}
 
-//-------------- AFTER LANDING PAGE BANNER ------------//
-
-.home-about-wrapper {
-  width: 1440px;
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-
-div.col.s1.home-about-icon-col, div.col.s2.home-about-content-col {
-  width: 100%;
-  text-align: center;
-}
-
-.home-about-icon {
-  text-align: center;
-}
-
-div.col.s2.home-about-content-col {
-  padding-top: 25px;
-  line-height: $large-height;
-}
-
-//----------HOME SERVICES HEADER-------------//
-.home-about-header {
-  font-family: "ApleTime";
-  margin: 0;
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
-}
-
-//-----------HOME SERVICES ROW--------------//
-
-.home-about-row {
-  padding-top: 50px;
-  margin-bottom: 40px;
-  width: 1220px;
-}
-
-.home-about-info {
-  width: 350px;
-  margin: 0 auto;
-  font-size: $medium-font;
-  line-height: 1.7em;
-}
-
-//-----------NUTRITION PLAN SERVICES-------------//
-
-.nutrition-plan-benefits-wrapper {
-    text-align: left;
-    font-size: 20px;
-    width: 300px;
-    margin: 20px auto;
-}
-
-.nutrition-plan-benefits {
-  margin: 10px auto;
-}
-
-//-------------JOIN ME BANNER-------------//
-
-.join-me-banner{
-  background-image: url('../../images/services-parallex.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 350px;
-  background-attachment: fixed;
-  position: relative;
-}
-
-//----------HOME SERVICES ----------------//
-
-div.row.home-services-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 50px;
-}
-
-
-.home-jamal-hamid__fadeAnimation {
-  background-image: url("../../images/jamal-hamid-home-service.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 510px;
-  margin: 0;
-}
-
-.home-services-title-wrapper {
-  font-family: "ApleTime";
-  color: $blood;
-  letter-spacing: .4em;
-  margin: 0 auto;
-}
-
-.home-services-title {
-  text-align: center;
-}
-
-.home-services-includes-wrapper {
-  padding-top: 50px;
-  width: 450px;
-  margin: 0 auto;
-}
-
-.home-services-includes {
-  font-size: $medium-font;
-  color: white;
-  margin-left: 20px;
-}
-
-.home-services-button-wrapper {
-  margin: 40px auto;
-}
-
-//----------HOME TESTIMONIAL --------------//
-
-.home-testimonial-wrapper {
-   max-width: 1200px;
-   margin: 0 auto;
-   padding-top: 300px;
-   position: relative;
-}
-
-.home-testimonial-team-hamid {
-  margin: 0 auto;
-  font-size: $xxxx-large;
-  color: $blood;
-  font-family: "ApleTime";
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 600px;
-  text-align: center;
-  top: 100px;
-
-}
-
-//-----------EDDIE GORDON TESTIMONIAL -----------//
-
-.home-testimonial__fadeInRight {
-  background-image: url("../../images/eddie-gordon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 auto;
-  width: 500px;
-  height: 500px;
-}
-
-
-
-//-----------CHRIS WEIDMAN TESTIMONIAL--------//
-
-
-.home-chris-weidman-wrapper {
-  text-align: center;
-  max-height: 670px;
-  overflow-y: hidden;
-  padding-top: 100px;
-}
-
-.home-testimonial__fadeInLeft {
-  background-image: url("../../images/chris-weidman.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 200px;
-  height: 1440px;
-  color: white;
-  animation: leftToRight 1s;
-  margin: auto;
-}
-
-//------------TESTIMONIAL CONTENT------------//
-
-
-.home-testimonial-title {
-  font-family: "ApleTime";
-  letter-spacing: .4em;
-  color: $blood;
-}
-
-.home-testimonial-text {
-  padding: 30px 50px;
-  line-height: 3em;
-  font-size: 16px;
-  color: white;
-}
-
-#home-test-jamal-hamid {
-  color: $blood;
-  font-size: 30px;
 }
 
 

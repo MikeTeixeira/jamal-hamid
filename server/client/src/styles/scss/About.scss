@@ -1,0 +1,85 @@
+.about-container {
+  // padding-top: 150px;
+}
+
+.about-parallex {
+  background-image: url('../../images/about-parallex-1.jpg');
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.about-content, .about-top {
+  max-width: 1200px;
+  height: 900px;
+  margin: 0 auto;
+}
+
+//------------ABOUT TOP HALF -----------//
+
+.about-top {
+  padding-top: 200px;
+  margin: 0 auto;
+}
+.about-me-header {
+  margin: 0 auto;
+  width: 700px;
+  font-size: 70px;
+  text-align: center;
+  font-family: "Apletime";
+  letter-spacing: .3em;
+  color: $blood;
+}
+
+
+
+
+
+.about-top-row1{
+  padding-top: 50px;
+  margin: 0 auto;
+}
+
+
+//-------------ABOUT TOP LEFT COL --------------//
+.boxing-gloves {
+  background-image: url('../../images/boxing-glove.png');
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 310px;
+  left: 800px;
+  animation: onLoad 3s;
+}
+
+.about-top-left-col {
+  background-color: white;
+  height: 592px;
+  color: black;
+}
+
+
+
+//--------------ABOUT TOP RIGHT COL -------------//
+
+.about-top-right-col {
+  background-color: $blood;
+  height: 592px;
+  color: black;
+  position: relative;
+}
+
+.about-stats-title {
+  border-bottom: 3px solid black;
+  line-height: 40px;
+}
+
+.about-stats-li {
+  padding-left: 20px;
+}

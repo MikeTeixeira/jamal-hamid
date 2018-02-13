@@ -3,6 +3,7 @@
 @media #{$extra-large-and-up} {
   .services-container{
     height: 2500px;
+    padding-top: 100px;
   }
 
   .services-wrapper {
@@ -10,9 +11,9 @@
     flex-wrap: wrap;
     max-width: 1150px;
     height: 100%;
-    margin: 50px auto;
+    margin: 0px auto;
     position: relative;
-    background-color: red;
+    background-color: $red;
   }
 
   //-----PACKAGES-------//

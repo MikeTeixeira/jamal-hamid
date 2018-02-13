@@ -14,9 +14,9 @@ export default class BottomFooter extends Component {
         <Row className="footer-row" >
         <Col className="footer-col">Copyright © 2018 Jamal Hamid. All rights reserved. </Col>
         <Col className="footer-col">
-          <a href="#">Contact</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
+          <a href="">Contact</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Terms of Use</a>
         </Col>
         </Row>
       </div>

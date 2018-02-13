@@ -17,8 +17,10 @@ module.exports = (app) => {
       servicePackage.name = req.body.name;
       servicePackage.price = req.body.price;
       servicePackage.status = req.body.status;
-      servicePackage.quantity = req.body.quantity;
-      servicePackage.description = req.body.description
+      servicePackage.currentlySold = req.body.currentlySold;
+      servicePackage.maxQuantity = req.body.maxQuantity;
+      servicePackage.inStock = req.body.inStock;
+      servicePackage.packagesInCart = req.body.packagesInCart;
 
       servicePackage.save((err, servicePackage) => {
         if(err) {

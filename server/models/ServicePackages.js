@@ -5,8 +5,10 @@ const { Schema } = mongoose;
 const servicePackagesSchema = new Schema ({
   name: String,
   price: String,
-  status: Boolean,
-  quantity: Number
+  inStock: Boolean,
+  currentlySold: Number,
+  packagesInCart: Number,
+  maxQuantity: Number
 });
 
 module.exports = mongoose.model("servicePackages", servicePackagesSchema);
